@@ -1,0 +1,137 @@
+Flow report for ADF5610
+Sun Jan 31 21:24:21 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Sun Jan 31 21:24:12 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; ADF5610                                     ;
+; Top-level Entity Name              ; ADF5610                                     ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C6GES                            ;
+; Timing Models                      ; Preliminary                                 ;
+; Total logic elements               ; 2,075 / 49,760 ( 4 % )                      ;
+;     Total combinational functions  ; 1,893 / 49,760 ( 4 % )                      ;
+;     Dedicated logic registers      ; 1,181 / 49,760 ( 2 % )                      ;
+; Total registers                    ; 1181                                        ;
+; Total pins                         ; 67 / 360 ( 19 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,059,840 / 1,677,312 ( 63 % )              ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 01/31/2021 21:22:48 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; ADF5610             ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                       ;
++-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 220837864969264.161212456810428                       ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                    ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; cpu/synthesis/../cpu.cmp                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; cpu/synthesis/../../cpu.qsys                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; clock_blink.bsf                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; clock_blink_inst.v                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; clock_blink_bb.v                                      ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                   ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                 ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; software/test_synthesizer/mem_init/                   ; --            ; --          ; --         ;
+; SLD_FILE                            ; cpu/synthesis/cpu.regmap                              ; --            ; --          ; --         ;
+; SLD_FILE                            ; cpu/synthesis/cpu.debuginfo                           ; --            ; --          ; --         ;
+; SLD_INFO                            ; QSYS_NAME cpu HAS_SOPCINFO 1 GENERATION_ID 1612124532 ; --            ; cpu         ; --         ;
+; SOPCINFO_FILE                       ; cpu/synthesis/../../cpu.sopcinfo                      ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                    ; --            ; --          ; --         ;
++-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:47     ; 1.0                     ; 4929 MB             ; 00:01:16                           ;
+; Fitter               ; 00:00:23     ; 1.6                     ; 5980 MB             ; 00:00:46                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4704 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:06     ; 2.3                     ; 4904 MB             ; 00:00:11                           ;
+; Total                ; 00:01:20     ; --                      ; --                  ; 00:02:17                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-F6HDU1B  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-F6HDU1B  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-F6HDU1B  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-F6HDU1B  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off ADF5610 -c ADF5610
+quartus_fit --read_settings_files=off --write_settings_files=off ADF5610 -c ADF5610
+quartus_asm --read_settings_files=off --write_settings_files=off ADF5610 -c ADF5610
+quartus_sta ADF5610 -c ADF5610
+
+
+

@@ -1,0 +1,32 @@
+/*
+ * lmx2694Handler.cpp
+ *
+ *  Created on: Feb 7, 2021
+ *      Author: giova
+ */
+
+#include "lmx2694Handler.h"
+static SPI_Handler staticSPI;
+static uint16 local_read_registers[0x73];
+static uint16 local_write_registers[0x73];
+
+
+lmx2694_Handler::lmx2694_Handler() {
+	// TODO Auto-generated constructor stub
+	write_registers=local_read_registers;
+	read_registers=local_write_registers;
+}
+
+lmx2694_Handler::~lmx2694_Handler() {
+	// TODO Auto-generated destructor stub
+}
+bool lmx2694_Handler::Init(){
+	spi=&staticSPI;
+	spi->Init(SPI_0_BASE,0);
+	spi->SetCS(true);
+
+}
+
+void lmx2694_Handler::Power_Down(){
+	spi.
+}

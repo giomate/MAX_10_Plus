@@ -1,0 +1,13 @@
+21:40:06 **** Build of configuration Nios II for project nios_app ****
+make all 
+The system cannot find the path specified.
+The system cannot find the path specified.
+Info: Building ../nios_app_bsp/
+make --no-print-directory -C ../nios_app_bsp/
+Compiling alt_alarm_start.c...
+The syntax of the command is incorrect.
+make[1]: *** [obj/HAL/src/alt_alarm_start.o] Error 1
+make: *** [../nios_app_bsp/-recurs-make-lib] Error 2
+
+21:40:07 Build Finished (took 941ms)
+

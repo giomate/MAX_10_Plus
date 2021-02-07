@@ -1,0 +1,55 @@
+/*
+ * lmx2694Handler.cpp
+ *
+ *  Created on: Feb 7, 2021
+ *      Author: giova
+ */
+
+#include "lmx2694Handler.h"
+static SPI_Handler staticSPI;
+static uint16 local_read_registers[0x73];
+static uint16 local_write_registers[0x73];
+
+
+lmx2694_Handler::lmx2694_Handler() {
+	// TODO Auto-generated constructor stub
+	write_registers=local_read_registers;
+	read_registers=local_write_registers;
+}
+
+lmx2694_Handler::~lmx2694_Handler() {
+	// TODO Auto-generated destructor stub
+}
+bool lmx2694_Handler::Init(){
+	spi=&staticSPI;
+	spi->Init(SPI_0_BASE,0);
+	spi->SetCS(true);
+	Power_Down();
+
+
+}
+
+bool lmx2694_Handler::Power_Down(){
+	spi->SetCS(false);
+	Get_Three_Bytes((uint32_t)OUT_PWR_DOWN);
+	int_result=spi->WriteData(three_bytes,3);
+	bool_result=int_result>0;
+	return bool_result;
+}
+void lmx2694_Handler::Get_Three_Bytes(uint32_t data){
+	for(int i=0; i<3;i++){
+		three_bytes[i]=(uint8_t)((data>>(8*i))&0xff);
+	}
+
+}
+void lmx2694_Handler::Get_Three_Bytes(uint8_t index, uint16 data){
+	for(int i=0; i<2;i++){
+		three_bytes[i]=(uint8_t)((data>>(8*i))&0xff);
+	}
+	three_bytes[2]=index;
+}
+void lmx2694_Handler::Initiate_Registers(){
+	for(int i=0; i<NUM;i++){
+
+	}
+}

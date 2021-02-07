@@ -1,0 +1,413 @@
+Analysis & Synthesis report for MAX10
+Sun Jan 31 17:14:43 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jan 31 17:14:43 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; MAX10                                       ;
+; Top-level Entity Name              ; MAX10                                       ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 105                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C6GES   ;                    ;
+; Top-level entity name                                            ; MAX10              ; MAX10              ;
+; Family name                                                      ; MAX 10 FPGA        ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; max10.v                          ; yes             ; Auto-Found Verilog HDL File  ; C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+;                                             ;                   ;
+; Total combinational functions               ; 0                 ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 0                 ;
+;     -- 3 input functions                    ; 0                 ;
+;     -- <=2 input functions                  ; 0                 ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 0                 ;
+;     -- arithmetic mode                      ; 0                 ;
+;                                             ;                   ;
+; Total registers                             ; 0                 ;
+;     -- Dedicated logic registers            ; 0                 ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 105               ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; AUDIO_BCLK~output ;
+; Maximum fan-out                             ; 1                 ;
+; Total fan-out                               ; 129               ;
+; Average fan-out                             ; 0.55              ;
++---------------------------------------------+-------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |MAX10                     ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 105  ; 0            ; 0          ; |MAX10              ; MAX10       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 105                         ;
+; cycloneiii_io_obuf    ; 24                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Jan 31 17:14:30 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MAX10 -c MAX10
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Warning (12125): Using design file max10.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MAX10 File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 6
+Info (12127): Elaborating entity "MAX10" for the top level hierarchy
+Warning (10034): Output port "LEDR" at max10.v(22) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+Warning (10034): Output port "HEX0" at max10.v(25) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 25
+Warning (10034): Output port "HEX1" at max10.v(26) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 26
+Warning (10034): Output port "NET_TX_D" at max10.v(67) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 67
+Warning (10034): Output port "AUDIO_DIN_MFP1" at max10.v(30) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 30
+Warning (10034): Output port "AUDIO_MCLK" at max10.v(33) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 33
+Warning (10034): Output port "AUDIO_SCL_SS_n" at max10.v(36) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 36
+Warning (10034): Output port "AUDIO_SCLK_MFP3" at max10.v(37) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 37
+Warning (10034): Output port "AUDIO_SPI_SELECT" at max10.v(39) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 39
+Warning (10034): Output port "DAC_SCLK" at max10.v(44) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 44
+Warning (10034): Output port "DAC_SYNC_n" at max10.v(45) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 45
+Warning (10034): Output port "FLASH_DCLK" at max10.v(49) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 49
+Warning (10034): Output port "FLASH_NCSO" at max10.v(50) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 50
+Warning (10034): Output port "FLASH_RESET_n" at max10.v(51) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 51
+Warning (10034): Output port "NET_GTX_CLK" at max10.v(54) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 54
+Warning (10034): Output port "NET_MDC" at max10.v(57) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 57
+Warning (10034): Output port "NET_RST_N" at max10.v(59) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 59
+Warning (10034): Output port "NET_TX_EN" at max10.v(68) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 68
+Warning (10034): Output port "NET_TX_ER" at max10.v(69) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 69
+Warning (10034): Output port "PM_I2C_SCL" at max10.v(72) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 72
+Warning (10034): Output port "UART_RESET_n" at max10.v(82) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 82
+Warning (10034): Output port "UART_TX" at max10.v(84) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 84
+Warning (12158): Entity "MAX10" contains only dangling pins
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "AUDIO_BCLK" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 29
+    Warning (13040): bidirectional pin "AUDIO_GPIO_MFP5" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 32
+    Warning (13040): bidirectional pin "AUDIO_RESET_n" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 35
+    Warning (13040): bidirectional pin "AUDIO_SDA_MOSI" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 38
+    Warning (13040): bidirectional pin "AUDIO_WCLK" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 40
+    Warning (13040): bidirectional pin "DAC_DATA" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 43
+    Warning (13040): bidirectional pin "FLASH_DATA[0]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 48
+    Warning (13040): bidirectional pin "FLASH_DATA[1]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 48
+    Warning (13040): bidirectional pin "FLASH_DATA[2]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 48
+    Warning (13040): bidirectional pin "FLASH_DATA[3]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 48
+    Warning (13040): bidirectional pin "NET_MDIO" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 58
+    Warning (13040): bidirectional pin "PM_I2C_SDA" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 73
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 76
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 77
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 78
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 79
+    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 88
+    Warning (13040): bidirectional pin "GPIO[1]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 88
+    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 88
+    Warning (13040): bidirectional pin "GPIO[3]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 88
+    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 88
+    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 88
+    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 88
+    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 88
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 22
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 25
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 25
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 25
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 25
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 25
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 25
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 25
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 26
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 26
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 26
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 26
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 26
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 26
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 26
+    Warning (13410): Pin "AUDIO_DIN_MFP1" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 30
+    Warning (13410): Pin "AUDIO_MCLK" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 33
+    Warning (13410): Pin "AUDIO_SCL_SS_n" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 36
+    Warning (13410): Pin "AUDIO_SCLK_MFP3" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 37
+    Warning (13410): Pin "AUDIO_SPI_SELECT" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 39
+    Warning (13410): Pin "DAC_SCLK" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 44
+    Warning (13410): Pin "DAC_SYNC_n" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 45
+    Warning (13410): Pin "FLASH_DCLK" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 49
+    Warning (13410): Pin "FLASH_NCSO" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 50
+    Warning (13410): Pin "FLASH_RESET_n" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 51
+    Warning (13410): Pin "NET_GTX_CLK" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 54
+    Warning (13410): Pin "NET_MDC" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 57
+    Warning (13410): Pin "NET_RST_N" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 59
+    Warning (13410): Pin "NET_TX_D[0]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 67
+    Warning (13410): Pin "NET_TX_D[1]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 67
+    Warning (13410): Pin "NET_TX_D[2]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 67
+    Warning (13410): Pin "NET_TX_D[3]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 67
+    Warning (13410): Pin "NET_TX_EN" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 68
+    Warning (13410): Pin "NET_TX_ER" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 69
+    Warning (13410): Pin "PM_I2C_SCL" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 72
+    Warning (13410): Pin "UART_RESET_n" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 82
+    Warning (13410): Pin "UART_TX" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 84
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 35 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_CLK_10" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 9
+    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 10
+    Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 11
+    Warning (15610): No output dependent on input pin "MAX10_CLK3_50" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 12
+    Warning (15610): No output dependent on input pin "FPGA_RESET_n" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 15
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 16
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 16
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 16
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 16
+    Warning (15610): No output dependent on input pin "KEY[4]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 16
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 19
+    Warning (15610): No output dependent on input pin "AUDIO_DOUT_MFP2" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 31
+    Warning (15610): No output dependent on input pin "AUDIO_MISO_MFP4" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 34
+    Warning (15610): No output dependent on input pin "NET_INT_n" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 55
+    Warning (15610): No output dependent on input pin "NET_LINK100" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 56
+    Warning (15610): No output dependent on input pin "NET_RX_CLK" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 60
+    Warning (15610): No output dependent on input pin "NET_RX_COL" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 61
+    Warning (15610): No output dependent on input pin "NET_RX_CRS" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 62
+    Warning (15610): No output dependent on input pin "NET_RX_D[0]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 63
+    Warning (15610): No output dependent on input pin "NET_RX_D[1]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 63
+    Warning (15610): No output dependent on input pin "NET_RX_D[2]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 63
+    Warning (15610): No output dependent on input pin "NET_RX_D[3]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 63
+    Warning (15610): No output dependent on input pin "NET_RX_DV" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 64
+    Warning (15610): No output dependent on input pin "NET_RX_ER" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 65
+    Warning (15610): No output dependent on input pin "NET_TX_CLK" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 66
+    Warning (15610): No output dependent on input pin "UART_RX" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/max_index_fft/max10.v Line: 83
+Info (21057): Implemented 105 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 35 input pins
+    Info (21059): Implemented 46 output pins
+    Info (21060): Implemented 24 bidirectional pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 133 warnings
+    Info: Peak virtual memory: 4742 megabytes
+    Info: Processing ended: Sun Jan 31 17:14:43 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:30
+
+

@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sun Jan 31 21:52:51 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : index_fft
+Top-level Entity Name : index_fft
+Family : MAX 10
+Total logic elements : 36,117
+    Total combinational functions : 26,372
+    Dedicated logic registers : 24,473
+Total registers : 24473
+Total pins : 108
+Total virtual pins : 0
+Total memory bits : 6,328
+Embedded Multiplier 9-bit elements : 260
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

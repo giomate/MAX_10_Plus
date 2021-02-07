@@ -1,0 +1,6 @@
+20:40:14 **** Incremental Build of configuration Nios II for project lmx2694_bsp ****
+wsl make all 
+[BSP build complete]
+
+20:40:16 Build Finished (took 1s.715ms)
+

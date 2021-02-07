@@ -1,0 +1,9 @@
+13:17:09 **** Incremental Build of configuration Nios II for project adf5610 ****
+wsl make all 
+Info: Building ../Synthesizer_bsp/
+make --no-print-directory -C ../Synthesizer_bsp/
+[BSP build complete]
+cp -f obj/default/libadf5610.a libadf5610.a
+
+13:17:10 Build Finished (took 1s.864ms)
+

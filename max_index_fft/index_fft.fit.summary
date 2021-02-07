@@ -1,0 +1,18 @@
+Fitter Status : Successful - Sun Jan 31 21:56:09 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : index_fft
+Top-level Entity Name : index_fft
+Family : MAX 10
+Device : 10M50DAF484C6GES
+Timing Models : Preliminary
+Total logic elements : 31,702 / 49,760 ( 64 % )
+    Total combinational functions : 26,459 / 49,760 ( 53 % )
+    Dedicated logic registers : 20,762 / 49,760 ( 42 % )
+Total registers : 20762
+Total pins : 108 / 360 ( 30 % )
+Total virtual pins : 0
+Total memory bits : 6,328 / 1,677,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 260 / 288 ( 90 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

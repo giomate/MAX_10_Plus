@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sun Feb 07 20:34:08 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : LMX2694
+Top-level Entity Name : LMX2694
+Family : MAX 10
+Total logic elements : 2,242
+    Total combinational functions : 1,909
+    Dedicated logic registers : 1,206
+Total registers : 1206
+Total pins : 108
+Total virtual pins : 0
+Total memory bits : 1,059,840
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 0
