@@ -1,0 +1,18 @@
+/*
+ * PLLLOCKEDCAPTURE.h
+ *
+ *  Created on: Feb 14, 2021
+ *      Author: giova
+ */
+
+#ifndef PLLLOCKEDCAPTURE_H_
+#define PLLLOCKEDCAPTURE_H_
+#include "alt_types.h"
+
+class PLL_LOCKED_CAPTURE {
+public:
+	PLL_LOCKED_CAPTURE();
+	virtual ~PLL_LOCKED_CAPTURE();
+};
+
+#endif /* PLLLOCKEDCAPTURE_H_ */

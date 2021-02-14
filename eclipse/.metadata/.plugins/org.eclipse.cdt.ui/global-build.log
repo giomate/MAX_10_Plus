@@ -1,5 +1,6 @@
-20:11:57 **** Build of configuration Nios II for project lmx2694_bsp ****
+20:54:42 **** Build of configuration Nios II for project lmx2694_bsp ****
 wsl make all 
+make: Warning: File 'public.mk' has modification time 3569 s in the future
 Compiling alt_alarm_start.c...
 nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
 Compiling alt_busy_sleep.c...
@@ -188,181 +189,134 @@ Creating libhal_bsp.a...
 rm -f -f libhal_bsp.a
 nios2-elf-ar.exe -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_spi.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
 [BSP build complete]
-20:12:08 **** Build of configuration Nios II for project lmx2694_lib ****
+make: warning:  Clock skew detected.  Your build may be incomplete.
+20:54:53 **** Build of configuration Nios II for project lmx2694_lib ****
 wsl make all 
+make: Warning: File '../lmx2694_bsp//public.mk' has modification time 3558 s in the future
 Info: Building ../lmx2694_bsp/
 make --no-print-directory -C ../lmx2694_bsp/
+make[1]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3598 s in the future
 [BSP build complete]
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+Info: Compiling PLLLOCKEDCAPTURE.cpp to obj/default/PLLLOCKEDCAPTURE.o
+nios2-elf-gcc.exe -xc++ -MP -MMD -c -I../lmx2694_bsp//HAL/inc -I../lmx2694_bsp/ -I../lmx2694_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -DONLY_LOCK_SIGNAL  -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/PLLLOCKEDCAPTURE.o PLLLOCKEDCAPTURE.cpp
 Info: Compiling SPIHandler.cpp to obj/default/SPIHandler.o
-nios2-elf-gcc.exe -xc++ -MP -MMD -c -I../lmx2694_bsp//HAL/inc -I../lmx2694_bsp/ -I../lmx2694_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/SPIHandler.o SPIHandler.cpp
+nios2-elf-gcc.exe -xc++ -MP -MMD -c -I../lmx2694_bsp//HAL/inc -I../lmx2694_bsp/ -I../lmx2694_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -DONLY_LOCK_SIGNAL  -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/SPIHandler.o SPIHandler.cpp
 Info: Compiling lmx2694Handler.cpp to obj/default/lmx2694Handler.o
-nios2-elf-gcc.exe -xc++ -MP -MMD -c -I../lmx2694_bsp//HAL/inc -I../lmx2694_bsp/ -I../lmx2694_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lmx2694Handler.o lmx2694Handler.cpp
+nios2-elf-gcc.exe -xc++ -MP -MMD -c -I../lmx2694_bsp//HAL/inc -I../lmx2694_bsp/ -I../lmx2694_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -DONLY_LOCK_SIGNAL  -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lmx2694Handler.o lmx2694Handler.cpp
 Info: Archiving obj/default/liblmx2694_lib.a
 rm -f obj/default/liblmx2694_lib.a
 mkdir -p obj/default
-nios2-elf-ar.exe  -src obj/default/liblmx2694_lib.a obj/default/SPIHandler.o obj/default/lmx2694Handler.o
+nios2-elf-ar.exe  -src obj/default/liblmx2694_lib.a obj/default/PLLLOCKEDCAPTURE.o obj/default/SPIHandler.o obj/default/lmx2694Handler.o
 cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-20:12:11 **** Build of configuration Nios II for project test_synthesizer ****
+make: warning:  Clock skew detected.  Your build may be incomplete.
+20:54:56 **** Build of configuration Nios II for project lmx_test ****
 wsl make all 
-Info: Building ../adf5610
-make --no-print-directory -C ../adf5610
-Info: Building ../Synthesizer_bsp/
-make --no-print-directory -C ../Synthesizer_bsp/
-[BSP build complete]
-cp -f obj/default/libadf5610.a libadf5610.a
-Info: Building ../../../LMX2694/software/lmx2694_lib
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_lib
+make: Warning: File '../lmx2694_bsp/public.mk' has modification time 3555 s in the future
+Info: Building ../lmx2694_lib
+make --no-print-directory -C ../lmx2694_lib
+make[1]: Warning: File 'obj/default/lmx2694Handler.d' has modification time 3599 s in the future
 Info: Building ../lmx2694_bsp/
 make --no-print-directory -C ../lmx2694_bsp/
+make[2]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3595 s in the future
 [BSP build complete]
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
 cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-Info: Building ../../../LMX2694/software/lmx2694_bsp
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_bsp
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+Info: Building ../lmx2694_bsp
+make --no-print-directory -C ../lmx2694_bsp
+make[1]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3594 s in the future
 [BSP build complete]
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
 Info: Compiling main.cpp to obj/default/main.o
-nios2-elf-gcc.exe -xc++ -MP -MMD -c -I../../../LMX2694/software/lmx2694_bsp/HAL/inc -I../../../LMX2694/software/lmx2694_bsp -I../../../LMX2694/software/lmx2694_bsp/drivers/inc -I./ -I../adf5610 -I../../../LMX2694/software/lmx2694_lib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
-Info: Linking test_synthesizer.elf
-nios2-elf-g++.exe  -T'../../../LMX2694/software/lmx2694_bsp/linker.x' -msys-crt0='../../../LMX2694/software/lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib -L../../../LMX2694/software/lmx2694_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib   -Wl,-Map=test_synthesizer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test_synthesizer.elf obj/default/main.o -ladf5610 -llmx2694_lib -lm -ladf5610 -llmx2694_lib -msys-lib=m
-nios2-elf-insert.exe test_synthesizer.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
+nios2-elf-gcc.exe -xc++ -MP -MMD -c -I../lmx2694_bsp/HAL/inc -I../lmx2694_bsp -I../lmx2694_bsp/drivers/inc -I../lmx2694_lib -I./  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -DONLY_LOCK_SIGNAL  -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+Info: Linking lmx_test.elf
+nios2-elf-g++.exe  -T'../lmx2694_bsp/linker.x' -msys-crt0='../lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lmx2694_lib -L../lmx2694_bsp -L../lmx2694_lib   -Wl,-Map=lmx_test.map -DONLY_LOCK_SIGNAL  -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lmx_test.elf obj/default/main.o -llmx2694_lib -lm -llmx2694_lib -msys-lib=m
+nios2-elf-insert.exe lmx_test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
 Unable to determine program-size.
-Info: Creating test_synthesizer.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header test_synthesizer.elf >test_synthesizer.objdump
-[test_synthesizer build complete]
-20:22:51 **** Incremental Build of configuration Nios II for project lmx2694_bsp ****
+Info: Creating lmx_test.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header lmx_test.elf >lmx_test.objdump
+[lmx_test build complete]
+make: warning:  Clock skew detected.  Your build may be incomplete.
+20:57:05 **** Incremental Build of configuration Nios II for project lmx2694_bsp ****
 wsl make all 
+make: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3466 s in the future
 [BSP build complete]
-20:22:53 **** Incremental Build of configuration Nios II for project lmx2694_lib ****
+make: warning:  Clock skew detected.  Your build may be incomplete.
+20:57:07 **** Incremental Build of configuration Nios II for project lmx2694_lib ****
 wsl make all 
+make: Warning: File 'obj/default/lmx2694Handler.d' has modification time 3468 s in the future
 Info: Building ../lmx2694_bsp/
 make --no-print-directory -C ../lmx2694_bsp/
+make[1]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3464 s in the future
 [BSP build complete]
-Info: Compiling lmx2694Handler.cpp to obj/default/lmx2694Handler.o
-nios2-elf-gcc.exe -xc++ -MP -MMD -c -I../lmx2694_bsp//HAL/inc -I../lmx2694_bsp/ -I../lmx2694_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lmx2694Handler.o lmx2694Handler.cpp
-Info: Archiving obj/default/liblmx2694_lib.a
-rm -f obj/default/liblmx2694_lib.a
-mkdir -p obj/default
-nios2-elf-ar.exe  -src obj/default/liblmx2694_lib.a obj/default/SPIHandler.o obj/default/lmx2694Handler.o
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
 cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-20:22:56 **** Incremental Build of configuration Nios II for project test_synthesizer ****
+make: warning:  Clock skew detected.  Your build may be incomplete.
+20:57:09 **** Incremental Build of configuration Nios II for project lmx_test ****
 wsl make all 
-Info: Building ../adf5610
-make --no-print-directory -C ../adf5610
-Info: Building ../Synthesizer_bsp/
-make --no-print-directory -C ../Synthesizer_bsp/
-[BSP build complete]
-cp -f obj/default/libadf5610.a libadf5610.a
-Info: Building ../../../LMX2694/software/lmx2694_lib
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_lib
+make: Warning: File '../lmx2694_bsp/public.mk' has modification time 3422 s in the future
+Info: Building ../lmx2694_lib
+make --no-print-directory -C ../lmx2694_lib
+make[1]: Warning: File 'obj/default/lmx2694Handler.d' has modification time 3466 s in the future
 Info: Building ../lmx2694_bsp/
 make --no-print-directory -C ../lmx2694_bsp/
+make[2]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3462 s in the future
 [BSP build complete]
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
 cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-Info: Building ../../../LMX2694/software/lmx2694_bsp
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_bsp
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+Info: Building ../lmx2694_bsp
+make --no-print-directory -C ../lmx2694_bsp
+make[1]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3460 s in the future
 [BSP build complete]
-Info: Linking test_synthesizer.elf
-nios2-elf-g++.exe  -T'../../../LMX2694/software/lmx2694_bsp/linker.x' -msys-crt0='../../../LMX2694/software/lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib -L../../../LMX2694/software/lmx2694_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib   -Wl,-Map=test_synthesizer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test_synthesizer.elf obj/default/main.o -ladf5610 -llmx2694_lib -lm -ladf5610 -llmx2694_lib -msys-lib=m
-nios2-elf-insert.exe test_synthesizer.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+Info: Linking lmx_test.elf
+nios2-elf-g++.exe  -T'../lmx2694_bsp/linker.x' -msys-crt0='../lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lmx2694_lib -L../lmx2694_bsp -L../lmx2694_lib   -Wl,-Map=lmx_test.map -DONLY_LOCK_SIGNAL  -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lmx_test.elf obj/default/main.o -llmx2694_lib -lm -llmx2694_lib -msys-lib=m
+nios2-elf-insert.exe lmx_test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
 Unable to determine program-size.
-Info: Creating test_synthesizer.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header test_synthesizer.elf >test_synthesizer.objdump
-[test_synthesizer build complete]
-20:26:46 **** Incremental Build of configuration Nios II for project lmx2694_bsp ****
+Info: Creating lmx_test.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header lmx_test.elf >lmx_test.objdump
+[lmx_test build complete]
+make: warning:  Clock skew detected.  Your build may be incomplete.
+20:58:51 **** Incremental Build of configuration Nios II for project lmx2694_bsp ****
 wsl make all 
+make: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3360 s in the future
 [BSP build complete]
-20:26:48 **** Incremental Build of configuration Nios II for project lmx2694_lib ****
+make: warning:  Clock skew detected.  Your build may be incomplete.
+20:58:53 **** Incremental Build of configuration Nios II for project lmx2694_lib ****
 wsl make all 
+make: Warning: File 'obj/default/lmx2694Handler.d' has modification time 3362 s in the future
 Info: Building ../lmx2694_bsp/
 make --no-print-directory -C ../lmx2694_bsp/
+make[1]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3358 s in the future
 [BSP build complete]
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
 cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-20:26:50 **** Incremental Build of configuration Nios II for project test_synthesizer ****
+make: warning:  Clock skew detected.  Your build may be incomplete.
+20:58:55 **** Incremental Build of configuration Nios II for project lmx_test ****
 wsl make all 
-Info: Building ../adf5610
-make --no-print-directory -C ../adf5610
-Info: Building ../Synthesizer_bsp/
-make --no-print-directory -C ../Synthesizer_bsp/
-[BSP build complete]
-cp -f obj/default/libadf5610.a libadf5610.a
-Info: Building ../../../LMX2694/software/lmx2694_lib
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_lib
+make: Warning: File '../lmx2694_bsp/public.mk' has modification time 3316 s in the future
+Info: Building ../lmx2694_lib
+make --no-print-directory -C ../lmx2694_lib
+make[1]: Warning: File 'obj/default/lmx2694Handler.d' has modification time 3360 s in the future
 Info: Building ../lmx2694_bsp/
 make --no-print-directory -C ../lmx2694_bsp/
+make[2]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3356 s in the future
 [BSP build complete]
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
 cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-Info: Building ../../../LMX2694/software/lmx2694_bsp
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_bsp
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+Info: Building ../lmx2694_bsp
+make --no-print-directory -C ../lmx2694_bsp
+make[1]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3355 s in the future
 [BSP build complete]
-Info: Linking test_synthesizer.elf
-nios2-elf-g++.exe  -T'../../../LMX2694/software/lmx2694_bsp/linker.x' -msys-crt0='../../../LMX2694/software/lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib -L../../../LMX2694/software/lmx2694_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib   -Wl,-Map=test_synthesizer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test_synthesizer.elf obj/default/main.o -ladf5610 -llmx2694_lib -lm -ladf5610 -llmx2694_lib -msys-lib=m
-nios2-elf-insert.exe test_synthesizer.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+Info: Linking lmx_test.elf
+nios2-elf-g++.exe  -T'../lmx2694_bsp/linker.x' -msys-crt0='../lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lmx2694_lib -L../lmx2694_bsp -L../lmx2694_lib   -Wl,-Map=lmx_test.map -DONLY_LOCK_SIGNAL  -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lmx_test.elf obj/default/main.o -llmx2694_lib -lm -llmx2694_lib -msys-lib=m
+nios2-elf-insert.exe lmx_test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
 Unable to determine program-size.
-Info: Creating test_synthesizer.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header test_synthesizer.elf >test_synthesizer.objdump
-[test_synthesizer build complete]
-20:27:15 **** Incremental Build of configuration Nios II for project lmx2694_bsp ****
-wsl make all 
-[BSP build complete]
-20:27:17 **** Incremental Build of configuration Nios II for project lmx2694_lib ****
-wsl make all 
-Info: Building ../lmx2694_bsp/
-make --no-print-directory -C ../lmx2694_bsp/
-[BSP build complete]
-cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-20:27:18 **** Incremental Build of configuration Nios II for project test_synthesizer ****
-wsl make all 
-Info: Building ../adf5610
-make --no-print-directory -C ../adf5610
-Info: Building ../Synthesizer_bsp/
-make --no-print-directory -C ../Synthesizer_bsp/
-[BSP build complete]
-cp -f obj/default/libadf5610.a libadf5610.a
-Info: Building ../../../LMX2694/software/lmx2694_lib
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_lib
-Info: Building ../lmx2694_bsp/
-make --no-print-directory -C ../lmx2694_bsp/
-[BSP build complete]
-cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-Info: Building ../../../LMX2694/software/lmx2694_bsp
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_bsp
-[BSP build complete]
-Info: Linking test_synthesizer.elf
-nios2-elf-g++.exe  -T'../../../LMX2694/software/lmx2694_bsp/linker.x' -msys-crt0='../../../LMX2694/software/lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib -L../../../LMX2694/software/lmx2694_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib   -Wl,-Map=test_synthesizer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test_synthesizer.elf obj/default/main.o -ladf5610 -llmx2694_lib -lm -ladf5610 -llmx2694_lib -msys-lib=m
-nios2-elf-insert.exe test_synthesizer.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
-Unable to determine program-size.
-Info: Creating test_synthesizer.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header test_synthesizer.elf >test_synthesizer.objdump
-[test_synthesizer build complete]
-20:40:14 **** Incremental Build of configuration Nios II for project lmx2694_bsp ****
-wsl make all 
-[BSP build complete]
-20:40:16 **** Incremental Build of configuration Nios II for project lmx2694_lib ****
-wsl make all 
-Info: Building ../lmx2694_bsp/
-make --no-print-directory -C ../lmx2694_bsp/
-[BSP build complete]
-cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-20:40:18 **** Incremental Build of configuration Nios II for project test_synthesizer ****
-wsl make all 
-Info: Building ../adf5610
-make --no-print-directory -C ../adf5610
-Info: Building ../Synthesizer_bsp/
-make --no-print-directory -C ../Synthesizer_bsp/
-[BSP build complete]
-cp -f obj/default/libadf5610.a libadf5610.a
-Info: Building ../../../LMX2694/software/lmx2694_lib
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_lib
-Info: Building ../lmx2694_bsp/
-make --no-print-directory -C ../lmx2694_bsp/
-[BSP build complete]
-cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
-Info: Building ../../../LMX2694/software/lmx2694_bsp
-make --no-print-directory -C ../../../LMX2694/software/lmx2694_bsp
-[BSP build complete]
-Info: Linking test_synthesizer.elf
-nios2-elf-g++.exe  -T'../../../LMX2694/software/lmx2694_bsp/linker.x' -msys-crt0='../../../LMX2694/software/lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib -L../../../LMX2694/software/lmx2694_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib   -Wl,-Map=test_synthesizer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test_synthesizer.elf obj/default/main.o -ladf5610 -llmx2694_lib -lm -ladf5610 -llmx2694_lib -msys-lib=m
-nios2-elf-insert.exe test_synthesizer.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
-Unable to determine program-size.
-Info: Creating test_synthesizer.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header test_synthesizer.elf >test_synthesizer.objdump
-[test_synthesizer build complete]
+Info: Creating lmx_test.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header lmx_test.elf >lmx_test.objdump
+[lmx_test build complete]
+make: warning:  Clock skew detected.  Your build may be incomplete.

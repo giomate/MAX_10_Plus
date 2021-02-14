@@ -108,7 +108,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 4         :                
 MOSI                         : AA16      : output : 3.3-V LVTTL       :         : 4         : Y              
-SPIGPIO[1]                   : AA17      : output : 3.3-V LVTTL       :         : 4         : Y              
+PLL_LOCKED[1]                : AA17      : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : AA18      : gnd    :                   :         :           :                
 FLASH_DATA[1]                : AA19      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 FLASH_DATA[3]                : AA20      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
@@ -503,7 +503,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : V12       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V14       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V15       :        :                   :         : 4         :                
-SPIGPIO[2]                   : V16       : output : 3.3-V LVTTL       :         : 4         : Y              
+OSC_OUT[0]                   : V16       : output : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V17       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V18       :        :                   :         : 5         :                
 GND                          : V19       : gnd    :                   :         :           :                
@@ -524,7 +524,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W11       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W13       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W14       :        :                   :         : 4         :                
-SPIGPIO[3]                   : W15       : output : 3.3-V LVTTL       :         : 4         : Y              
+OSC_OUT[1]                   : W15       : output : 3.3-V LVTTL       :         : 4         : Y              
 CS_n                         : W16       : output : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : W17       :        :                   :         : 4         :                
 RH_TEMP_I2C_SDA              : W18       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
@@ -547,8 +547,8 @@ GND                          : Y12       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y13       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y14       :        :                   :         : 4         :                
 GND                          : Y15       : gnd    :                   :         :           :                
-MISO                         : Y16       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-SPIGPIO[0]                   : Y17       : output : 3.3-V LVTTL       :         : 4         : Y              
+MISO                         : Y16       : input  : 3.3-V LVTTL       :         : 4         : Y              
+PLL_LOCKED[0]                : Y17       : input  : 3.3-V LVTTL       :         : 4         : Y              
 RH_TEMP_I2C_SCL              : Y18       : output : 3.3-V LVTTL       :         : 4         : Y              
 RH_TEMP_DRDY_n               : Y19       : input  : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y20       :        :                   :         : 5         :                
