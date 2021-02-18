@@ -1,0 +1,18 @@
+/*
+ * PLLLOCKEDCAPTURE.cpp
+ *
+ *  Created on: Feb 14, 2021
+ *      Author: giova
+ */
+
+#include "PLLLOCKEDCAPTURE.h"
+
+PLL_LOCKED_CAPTURE::PLL_LOCKED_CAPTURE() {
+	// TODO Auto-generated constructor stub
+
+}
+
+PLL_LOCKED_CAPTURE::~PLL_LOCKED_CAPTURE() {
+	// TODO Auto-generated destructor stub
+}
+

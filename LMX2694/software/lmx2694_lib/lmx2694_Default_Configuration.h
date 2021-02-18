@@ -7,10 +7,10 @@
 
 #ifndef LMX2694_DEFAULT_CONFIGURATION_H_
 #define LMX2694_DEFAULT_CONFIGURATION_H_
-#include "alt_types.h"
-#include <stdlib.h>
-#include <stdint.h>
-#include <stdbool.h>
+//#include "compiler.h"
+ #include <stdlib.h>
+ #include <stdint.h>
+ #include <stdbool.h>
 
 #define OUT_PWR_DOWN 0xAc1fE3
 
@@ -20,11 +20,17 @@
 #define MUXOUT_READBACK 0x2118
 #define NUMBER_REGISTERS 0x73
 #define FCAL_EN	3
+#define READBACK_ENABLE_BIT	2
+#define MIN_VCO_FREQUENCY 7550
+#define MAX_VCO_FREQUENCY 15100
+#define MAX_SENSOR_FREQUENCY 4400
+#define OUT_MUX_VCO	0x01
+#define REFERENCE_FREQUENCY 100
+#define MIN_PLL_FREQUENCY 400
 
-typedef unsigned short uint16;
 
 
-uint16 const default_registers[]={
+uint16_t const default_registers[]={
 		0x0000,
 		0x0000,
 		0x0000,
@@ -64,7 +70,7 @@ uint16 const default_registers[]={
 		0x0064,
 		0x0000,
 		0x000C,
-		0x0800,
+		0x0800,		//R75 0x4b 0800
 		0x0000,
 		0x003F,
 		0x0001,
@@ -93,23 +99,23 @@ uint16 const default_registers[]={
 		0x4180,
 		0x0300,
 		0x0300,
-		0x07FC,	//R46
-		0xC8C2,//R45
-		0x1FE3, //R44	0x2C1FE3
-		0x0000,
+		0x07FC,		//R46
+		0xC8C2,		//R45	0x2D c8c6
+		0x1F61,		//R44	0x2C1FE3
+		0x0001,		//R43 0x2b0001
 		0x0000,
 		0x0000,
 		0x0000,
 		0xDA80,
 		0xFD51,
-		0x8404,
+		0x8104,		//R37	0x25 8104
 		0x0028,		//R36	0x240028
 		0x0004,
 		0x0000,
 		0x1E21,
 		0x0393,
-		0x43EC,
-		0x318C,  //  R30	0x1E318C
+		0x03EC,		//R31  0x1F 04eec
+		0x318C,		//  R30	0x1E318C
 		0x318C,
 		0x0488,
 		0x0002,

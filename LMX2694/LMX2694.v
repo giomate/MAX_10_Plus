@@ -53,7 +53,7 @@ module LMX2694(
 	//////////// LMX2694 SPI //////////
 	output		     				SPI_SCK,
 	output		          		MOSI,
-	inout 		          			MISO,
+	input 		          			MISO,
 	output		          		CS_n,
 
 	//////////// Ethernet //////////
@@ -95,7 +95,8 @@ module LMX2694(
 	output		          		UART_TX,
 
 	//////////// TMD 2x6 GPIO Header, TMD connect to TMD Default //////////
-	output		     [3:0]		SPIGPIO
+	output		     [1:0]		OSC_OUT,
+	input		     [1:0]		PLL_LOCKED
 );
 
 
@@ -122,7 +123,7 @@ wire spi_ss_n;
 //=======================================================
 
 assign LEDR[0]=pll1_locked;
-assign	SPIGPIO[3]=pll1_clk;
+assign	OSC_OUT[1]=pll1_clk;
 assign reset_n = 1'b1;
 assign SPI_SCK=spi_clk;
 assign MOSI=spi_mosi;
@@ -156,8 +157,9 @@ end
 assign LEDR[1]=led_value[0];
 
 nios_cpu spi_controller(
-		 .clk_clk                               (MAX10_CLK1_50),                               //                        clk.clk
+		 .clk_clk                               (pll1_clk),                               //                        clk.clk
         .reset_reset_n                         (reset_n),                         //                      reset.reset_n
+		  .pio_0_external_connection_export(PLL_LOCKED), // pio_0_external_connection.export
 		.spi_0_external_MISO(spi_miso), // spi_adf5610_external.MISO
 		. spi_0_external_MOSI (spi_mosi), //                     .MOSI
 		.spi_0_external_SCLK(spi_clk), //                     .SCLK

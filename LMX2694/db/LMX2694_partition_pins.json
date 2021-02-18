@@ -20,11 +20,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "MISO",
+					"name" : "PLL_LOCKED[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MAX10_CLK1_50",
+					"name" : "PLL_LOCKED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MISO",
 					"strict" : false
 				},
 				{

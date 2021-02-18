@@ -21,7 +21,8 @@ obj/default/main.o: main.cpp main.h \
  ../../../LMX2694/software/lmx2694_lib/lmx2694_Default_Configuration.h \
  ../../../LMX2694/software/lmx2694_lib/SPIHandler.h \
  ../../../LMX2694/software/lmx2694_bsp/drivers/inc/altera_avalon_spi.h \
- ../../../LMX2694/software/lmx2694_bsp/drivers/inc/altera_avalon_spi_regs.h
+ ../../../LMX2694/software/lmx2694_bsp/drivers/inc/altera_avalon_spi_regs.h \
+ ../../../LMX2694/software/lmx2694_lib/PLLLOCKEDCAPTURE.h
 
 main.h:
 
@@ -70,3 +71,5 @@ main.h:
 ../../../LMX2694/software/lmx2694_bsp/drivers/inc/altera_avalon_spi.h:
 
 ../../../LMX2694/software/lmx2694_bsp/drivers/inc/altera_avalon_spi_regs.h:
+
+../../../LMX2694/software/lmx2694_lib/PLLLOCKEDCAPTURE.h:

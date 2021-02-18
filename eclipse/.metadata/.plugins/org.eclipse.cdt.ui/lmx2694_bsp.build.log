@@ -1,6 +1,8 @@
-20:40:14 **** Incremental Build of configuration Nios II for project lmx2694_bsp ****
+20:58:51 **** Incremental Build of configuration Nios II for project lmx2694_bsp ****
 wsl make all 
+make: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3360 s in the future
 [BSP build complete]
+make: warning:  Clock skew detected.  Your build may be incomplete.
 
-20:40:16 Build Finished (took 1s.715ms)
+20:58:53 Build Finished (took 1s.568ms)
 

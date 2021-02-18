@@ -1,0 +1,29 @@
+20:58:55 **** Incremental Build of configuration Nios II for project lmx_test ****
+wsl make all 
+make: Warning: File '../lmx2694_bsp/public.mk' has modification time 3316 s in the future
+Info: Building ../lmx2694_lib
+make --no-print-directory -C ../lmx2694_lib
+make[1]: Warning: File 'obj/default/lmx2694Handler.d' has modification time 3360 s in the future
+Info: Building ../lmx2694_bsp/
+make --no-print-directory -C ../lmx2694_bsp/
+make[2]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3356 s in the future
+[BSP build complete]
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+Info: Building ../lmx2694_bsp
+make --no-print-directory -C ../lmx2694_bsp
+make[1]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3355 s in the future
+[BSP build complete]
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+Info: Linking lmx_test.elf
+nios2-elf-g++.exe  -T'../lmx2694_bsp/linker.x' -msys-crt0='../lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lmx2694_lib -L../lmx2694_bsp -L../lmx2694_lib   -Wl,-Map=lmx_test.map -DONLY_LOCK_SIGNAL  -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lmx_test.elf obj/default/main.o -llmx2694_lib -lm -llmx2694_lib -msys-lib=m
+nios2-elf-insert.exe lmx_test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
+Unable to determine program-size.
+Info: Creating lmx_test.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header lmx_test.elf >lmx_test.objdump
+[lmx_test build complete]
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+20:58:59 Build Finished (took 4s.733ms)
+

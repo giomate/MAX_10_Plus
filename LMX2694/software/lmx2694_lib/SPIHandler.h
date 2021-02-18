@@ -31,11 +31,13 @@ public:
 	virtual ~SPI_Handler();
 	bool Init(uint32_t add, uint32_t slv);
 	int WriteData(uint8_t *data,uint32_t size);
+	int Write(uint8_t *data,uint32_t size){return WriteData(data,size);};
 	int TransferData(uint8_t *data,uint32_t size);
 	int TransferData(uint8_t *buffer_tx,uint8_t *buffer_rx,uint32_t size);
 	int TransferData(uint8_t *buffer_tx,uint32_t write_size,uint8_t *buffer_rx,uint32_t read_size);
 	int ReadData(uint8_t *buffer_tx,uint8_t *buffer_rx,uint32_t size);
 	int ReadData(uint8_t *data,uint32_t size);
+	int Read(uint8_t *data,uint32_t size){return ReadData(data,size);};
 	void Open(void);
 	void Close(void);
 	void SetCS(bool sen);
