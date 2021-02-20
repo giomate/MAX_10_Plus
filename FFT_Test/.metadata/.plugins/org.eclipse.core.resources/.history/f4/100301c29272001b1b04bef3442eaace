@@ -1,0 +1,17 @@
+/*
+ * FFTHANDLER.h
+ *
+ *  Created on: Feb 19, 2021
+ *      Author: giova
+ */
+
+#ifndef FFTHANDLER_H_
+#define FFTHANDLER_H_
+
+class FFT_HANDLER {
+public:
+	FFT_HANDLER();
+	virtual ~FFT_HANDLER();
+};
+
+#endif /* FFTHANDLER_H_ */

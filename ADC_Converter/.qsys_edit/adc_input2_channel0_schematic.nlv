@@ -1,0 +1,12 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst adc_input2_channel0.adc_in2_ch0_converter_0 -pg 1 -lvl 2 -y 30
+preplace inst adc_input2_channel0.clk_0 -pg 1 -lvl 1 -y 50
+preplace inst adc_input2_channel0 -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>adc_input2_channel0</net_container>(SLAVE)clk_0.clk_in,(SLAVE)adc_input2_channel0.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>adc_input2_channel0</net_container>(SLAVE)adc_input2_channel0.adc_in2_ch0_converter_0_adc_out,(SLAVE)adc_in2_ch0_converter_0.adc_out) 1 0 2 NJ 40 NJ
+preplace netloc POINT_TO_POINT<net_container>adc_input2_channel0</net_container>(SLAVE)adc_in2_ch0_converter_0.reset,(MASTER)clk_0.clk_reset) 1 1 1 N
+preplace netloc EXPORT<net_container>adc_input2_channel0</net_container>(SLAVE)adc_input2_channel0.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>adc_input2_channel0</net_container>(SLAVE)adc_in2_ch0_converter_0.clock,(MASTER)clk_0.clk) 1 1 1 N
+levelinfo -pg 1 0 200 600
+levelinfo -hier adc_input2_channel0 210 240 460 590

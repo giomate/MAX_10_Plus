@@ -1,0 +1,824 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# Date created = 15:21:54  February 18, 2021
+#
+# -------------------------------------------------------------------------- #
+
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "MAX 10 FPGA"
+set_global_assignment -name DEVICE 10M50DAF484C6GES
+set_global_assignment -name TOP_LEVEL_ENTITY index_fft_qip
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:21:54  FEBRUARY 18, 2021"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+
+#============================================================
+# CLOCK
+#============================================================
+set_location_assignment PIN_M9 -to ADC_CLK_10
+set_location_assignment PIN_N5 -to MAX10_CLK1_50
+set_location_assignment PIN_V9 -to MAX10_CLK2_50
+set_location_assignment PIN_N14 -to MAX10_CLK3_50
+
+#============================================================
+# KEY
+#============================================================
+set_location_assignment PIN_T22 -to KEY[0]
+set_location_assignment PIN_U22 -to KEY[1]
+set_location_assignment PIN_AA22 -to KEY[2]
+set_location_assignment PIN_AA21 -to KEY[3]
+set_location_assignment PIN_R22 -to KEY[4]
+set_location_assignment PIN_D9 -to FPGA_RESET_n
+
+#============================================================
+# SW
+#============================================================
+set_location_assignment PIN_N22 -to SW[0]
+set_location_assignment PIN_M22 -to SW[1]
+set_location_assignment PIN_N21 -to SW[2]
+set_location_assignment PIN_L22 -to SW[3]
+set_location_assignment PIN_J22 -to SW[4]
+set_location_assignment PIN_H22 -to SW[5]
+set_location_assignment PIN_J21 -to SW[6]
+set_location_assignment PIN_C21 -to SW[7]
+set_location_assignment PIN_G19 -to SW[8]
+set_location_assignment PIN_H21 -to SW[9]
+
+#============================================================
+# LEDR
+#============================================================
+set_location_assignment PIN_C2 -to LEDR[0]
+set_location_assignment PIN_B3 -to LEDR[1]
+set_location_assignment PIN_A3 -to LEDR[2]
+set_location_assignment PIN_C3 -to LEDR[3]
+set_location_assignment PIN_A4 -to LEDR[4]
+set_location_assignment PIN_B4 -to LEDR[5]
+set_location_assignment PIN_C4 -to LEDR[6]
+set_location_assignment PIN_B5 -to LEDR[7]
+set_location_assignment PIN_C5 -to LEDR[8]
+set_location_assignment PIN_D5 -to LEDR[9]
+
+#============================================================
+# HEX
+#============================================================
+set_location_assignment PIN_D6 -to HEX0[0]
+set_location_assignment PIN_A5 -to HEX0[1]
+set_location_assignment PIN_C6 -to HEX0[2]
+set_location_assignment PIN_A6 -to HEX0[3]
+set_location_assignment PIN_F7 -to HEX0[4]
+set_location_assignment PIN_D7 -to HEX0[5]
+set_location_assignment PIN_B7 -to HEX0[6]
+set_location_assignment PIN_C7 -to HEX1[0]
+set_location_assignment PIN_C8 -to HEX1[1]
+set_location_assignment PIN_D8 -to HEX1[2]
+set_location_assignment PIN_D10 -to HEX1[3]
+set_location_assignment PIN_E10 -to HEX1[4]
+set_location_assignment PIN_H11 -to HEX1[5]
+set_location_assignment PIN_E6 -to HEX1[6]
+
+#============================================================
+# Audio
+#============================================================
+set_location_assignment PIN_J12 -to AUDIO_BCLK
+set_location_assignment PIN_J13 -to AUDIO_DIN_MFP1
+set_location_assignment PIN_H13 -to AUDIO_DOUT_MFP2
+set_location_assignment PIN_D14 -to AUDIO_GPIO_MFP5
+set_location_assignment PIN_J11 -to AUDIO_MCLK
+set_location_assignment PIN_E13 -to AUDIO_MISO_MFP4
+set_location_assignment PIN_D13 -to AUDIO_RESET_n
+set_location_assignment PIN_H14 -to AUDIO_SCLK_MFP3
+set_location_assignment PIN_F15 -to AUDIO_SCL_SS_n
+set_location_assignment PIN_F16 -to AUDIO_SDA_MOSI
+set_location_assignment PIN_E14 -to AUDIO_SPI_SELECT
+set_location_assignment PIN_H12 -to AUDIO_WCLK
+
+#============================================================
+# DAC
+#============================================================
+set_location_assignment PIN_A2 -to DAC_DATA
+set_location_assignment PIN_B1 -to DAC_SCLK
+set_location_assignment PIN_B2 -to DAC_SYNC_n
+
+#============================================================
+# QSPI Flash
+#============================================================
+set_location_assignment PIN_AB18 -to FLASH_DATA[0]
+set_location_assignment PIN_AA19 -to FLASH_DATA[1]
+set_location_assignment PIN_AB19 -to FLASH_DATA[2]
+set_location_assignment PIN_AA20 -to FLASH_DATA[3]
+set_location_assignment PIN_AB17 -to FLASH_DCLK
+set_location_assignment PIN_AB21 -to FLASH_NCSO
+set_location_assignment PIN_AB20 -to FLASH_RESET_n
+
+#============================================================
+# Ethernet
+#============================================================
+set_location_assignment PIN_C11 -to NET_GTX_CLK
+set_location_assignment PIN_C13 -to NET_INT_n
+set_location_assignment PIN_A7 -to NET_LINK100
+set_location_assignment PIN_D12 -to NET_MDC
+set_location_assignment PIN_E12 -to NET_MDIO
+set_location_assignment PIN_C14 -to NET_RST_N
+set_location_assignment PIN_J10 -to NET_RX_CLK
+set_location_assignment PIN_C9 -to NET_RX_COL
+set_location_assignment PIN_A9 -to NET_RX_CRS
+set_location_assignment PIN_A10 -to NET_RX_D[0]
+set_location_assignment PIN_B10 -to NET_RX_D[1]
+set_location_assignment PIN_A11 -to NET_RX_D[2]
+set_location_assignment PIN_B11 -to NET_RX_D[3]
+set_location_assignment PIN_A8 -to NET_RX_DV
+set_location_assignment PIN_B8 -to NET_RX_ER
+set_location_assignment PIN_E11 -to NET_TX_CLK
+set_location_assignment PIN_A12 -to NET_TX_D[0]
+set_location_assignment PIN_B12 -to NET_TX_D[1]
+set_location_assignment PIN_A13 -to NET_TX_D[2]
+set_location_assignment PIN_A14 -to NET_TX_D[3]
+set_location_assignment PIN_C10 -to NET_TX_EN
+set_location_assignment PIN_C12 -to NET_TX_ER
+
+#============================================================
+# Power Monitor
+#============================================================
+set_location_assignment PIN_E8 -to PM_I2C_SCL
+set_location_assignment PIN_E9 -to PM_I2C_SDA
+
+#============================================================
+# PS2
+#============================================================
+set_location_assignment PIN_V3 -to PS2_CLK
+set_location_assignment PIN_U1 -to PS2_CLK2
+set_location_assignment PIN_P3 -to PS2_DAT
+set_location_assignment PIN_R3 -to PS2_DAT2
+
+#============================================================
+# Humidity and Temperature Sensor
+#============================================================
+set_location_assignment PIN_Y19 -to RH_TEMP_DRDY_n
+set_location_assignment PIN_Y18 -to RH_TEMP_I2C_SCL
+set_location_assignment PIN_W18 -to RH_TEMP_I2C_SDA
+
+#============================================================
+# Uart to USB
+#============================================================
+set_location_assignment PIN_D15 -to UART_RESET_n
+set_location_assignment PIN_E16 -to UART_RX
+set_location_assignment PIN_E15 -to UART_TX
+
+#============================================================
+# TMD 2x6 GPIO Header, TMD connect to TMD Default
+#============================================================
+set_location_assignment PIN_Y17 -to GPIO[0]
+set_location_assignment PIN_AA17 -to GPIO[1]
+set_location_assignment PIN_V16 -to GPIO[2]
+set_location_assignment PIN_W15 -to GPIO[3]
+set_location_assignment PIN_AB16 -to GPIO[4]
+set_location_assignment PIN_AA16 -to GPIO[5]
+set_location_assignment PIN_Y16 -to GPIO[6]
+set_location_assignment PIN_W16 -to GPIO[7]
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SDC_FILE ../fft_index/max_10_frequency_index/max_10_index_frequency_constraints.sdc
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_64.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_63.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_62.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_60.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_59.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_58.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_56.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_55.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_54.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_52.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_51.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_50.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_48.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_47.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_46.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_44.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_43.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_42.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_40.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_39.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_38.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_36.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_35.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_34.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_32.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_31.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_5_2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_64.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_63.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_62.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_61.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_60.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_59.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_58.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_57.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_56.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_55.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_54.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_53.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_52.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_51.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_50.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_48.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_47.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_46.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_45.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_44.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_43.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_42.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_41.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_40.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_39.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_38.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_37.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_36.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_35.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_34.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_32.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_31.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLROM_3_2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block17.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block17.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/TWDLMULT_SDNF1_3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/serial2parallel.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block17.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block17.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block17.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF2_2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block17.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block17.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block17.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/RADIX22FFT_SDNF1_1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Quadrant_Mapper.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Maximum.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/max_10_index_frequency_tc.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/max_10_index_frequency_pkg.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/max_10_index_frequency.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/index_finder.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/frequency_max.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/for_each.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/FFT_streamer.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/FFT_HDL_Optimized.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/dsp_FIRFilter.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/DC_Blocker_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/DC_Blocker.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/CordicKernelMag.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block106.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block105.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block104.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block103.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block102.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block101.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block100.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block99.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block98.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block97.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block96.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block95.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block94.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block93.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block92.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block91.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block90.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block89.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block88.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block87.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block86.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block85.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block84.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block83.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block82.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block81.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block80.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block79.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block78.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block77.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block76.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block75.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block74.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block73.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block72.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block71.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block70.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block69.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block68.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block67.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block66.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block65.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block64.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block63.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block62.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block61.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block60.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block59.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block58.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block57.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block56.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block55.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block54.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block53.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block52.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block51.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block50.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block49.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block48.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block47.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block46.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block45.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block44.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block43.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block42.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block41.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block40.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block39.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block38.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block37.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block36.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block35.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block34.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block33.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block32.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block31.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block30.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block29.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block28.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block27.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block26.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block25.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block24.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block23.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block22.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block21.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block20.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block19.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block18.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block17.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block16.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block15.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block14.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block13.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block12.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block11.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block10.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block9.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block8.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block7.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block6.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block5.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block4.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block3.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block2.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block1.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply_block.vhd
+set_global_assignment -name VHDL_FILE ../fft_index/max_10_frequency_index/Complex4Multiply.vhd
+set_global_assignment -name SDC_FILE index_fft.sdc
+set_global_assignment -name VERILOG_FILE index_fft_qip.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK1_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK2_50
+set_instance_assignment -name IO_STANDARD "1.5 V" -to MAX10_CLK3_50
+set_instance_assignment -name IO_STANDARD "1.5 V SCHMITT TRIGGER" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "1.5 V SCHMITT TRIGGER" -to KEY[1]
+set_instance_assignment -name IO_STANDARD "1.5 V SCHMITT TRIGGER" -to KEY[2]
+set_instance_assignment -name IO_STANDARD "1.5 V SCHMITT TRIGGER" -to KEY[3]
+set_instance_assignment -name IO_STANDARD "1.5 V SCHMITT TRIGGER" -to KEY[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_RESET_n
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[0]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[2]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[3]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[4]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[5]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[6]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[7]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[8]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to SW[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_BCLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_DIN_MFP1
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_DOUT_MFP2
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_GPIO_MFP5
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_MCLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_MISO_MFP4
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_RESET_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_SCLK_MFP3
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_SCL_SS_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_SDA_MOSI
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_SPI_SELECT
+set_instance_assignment -name IO_STANDARD "2.5 V" -to AUDIO_WCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC_DATA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC_SYNC_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FLASH_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FLASH_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FLASH_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FLASH_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FLASH_DCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FLASH_NCSO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FLASH_RESET_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_GTX_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_INT_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_LINK100
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_MDC
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_MDIO
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_RST_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to NET_RX_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_RX_COL
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_RX_CRS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_RX_D[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_RX_D[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_RX_D[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_RX_D[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_RX_DV
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_RX_ER
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to NET_TX_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_TX_D[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_TX_D[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_TX_D[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_TX_D[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_TX_EN
+set_instance_assignment -name IO_STANDARD "2.5 V" -to NET_TX_ER
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PM_I2C_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PM_I2C_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RH_TEMP_DRDY_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RH_TEMP_I2C_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RH_TEMP_I2C_SDA
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_RESET_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_RX
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_TX
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[7]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

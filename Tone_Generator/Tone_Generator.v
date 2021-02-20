@@ -22,8 +22,8 @@ module Tone_Generator(
 	output		     [9:0]		LEDR,
 
 	//////////// HEX //////////
-	output		     [6:0]		HEX0,
-	output		     [6:0]		HEX1,
+	output	reg	     [6:0]		HEX0,
+	output	reg     [6:0]		HEX1,
 
 	//////////// DAC //////////
 	inout 		          		DAC_DATA,
@@ -65,6 +65,8 @@ wire pll1_c0;
 wire pll1_locked;
 wire pll1_clk;
 wire        RESET_N ;
+wire [15:0] DATA16;
+wire [19:0] counter20;
 
 
 
@@ -93,8 +95,20 @@ DAC16 dac (
  );
 
  //----LED DISPLAY--
-assign LEDR[9:0]  =  SW [9:0] ; 
+assign LEDR[4:0]  =  SW [4:0] ; 
 
+counter c20(
+	.clock(pll1_clk),
+	.q(counter20)
+	);
+	
+	always@(posedge pll1_clk) begin
+		if(counter20==1)begin
+			 HEX1[6:0]  <=  DATA16 [15:9] ; 
+			 HEX0[6:0]  <=  DATA16 [8:2] ; 
+			 end
+			end
+			
 
 
 endmodule

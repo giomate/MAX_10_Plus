@@ -1,0 +1,11 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst tones_generator_sys.dac_tones_generator_0 -pg 1 -lvl 2 -y 30
+preplace inst tones_generator_sys -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>tones_generator_sys</net_container>(SLAVE)tones_generator_sys.dac_tones_generator_0_reset,(SLAVE)dac_tones_generator_0.reset) 1 0 2 NJ 80 NJ
+preplace netloc EXPORT<net_container>tones_generator_sys</net_container>(SLAVE)dac_tones_generator_0.switches,(SLAVE)tones_generator_sys.dac_tones_generator_0_switches) 1 0 2 NJ 120 NJ
+preplace netloc EXPORT<net_container>tones_generator_sys</net_container>(SLAVE)tones_generator_sys.dac_tones_generator_0_dac_out,(SLAVE)dac_tones_generator_0.dac_out) 1 0 2 NJ 60 NJ
+preplace netloc EXPORT<net_container>tones_generator_sys</net_container>(SLAVE)dac_tones_generator_0.clock,(SLAVE)tones_generator_sys.dac_tones_generator_0_clock) 1 0 2 NJ 40 NJ
+preplace netloc EXPORT<net_container>tones_generator_sys</net_container>(SLAVE)dac_tones_generator_0.spi_data,(SLAVE)tones_generator_sys.dac_tones_generator_0_spi_data) 1 0 2 NJ 100 NJ
+levelinfo -pg 1 0 200 640
+levelinfo -hier tones_generator_sys 210 230 500 630

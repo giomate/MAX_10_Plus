@@ -1,0 +1,8 @@
+	component adc_input2_channel0 is
+		port (
+			adc_in2_ch0_converter_0_adc_out_rx_in : out std_logic_vector(11 downto 0);        -- rx_in
+			clk_clk                               : in  std_logic                     := 'X'; -- clk
+			reset_reset_n                         : in  std_logic                     := 'X'  -- reset_n
+		);
+	end component adc_input2_channel0;
+

@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="150741a67801b9e1ec27"/>
+  </project>
+  <file_info>
+    <file device="10M50DAF484C6GES" path="ADC_Converter.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="anain2_converter:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME anain2_converter HAS_SOPCINFO 1 GENERATION_ID 1613669711"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

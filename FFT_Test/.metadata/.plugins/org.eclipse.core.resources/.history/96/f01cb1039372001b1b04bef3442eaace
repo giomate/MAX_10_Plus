@@ -1,0 +1,22 @@
+/*
+ * FFTHANDLER.h
+ *
+ *  Created on: Feb 19, 2021
+ *      Author: giova
+ */
+
+#ifndef FFTHANDLER_H_
+#define FFTHANDLER_H_
+#include "alt_types.h"
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdbool.h>
+class FFT_HANDLER {
+private:
+	uint32_t base_address
+public:
+	FFT_HANDLER();
+	virtual ~FFT_HANDLER();
+};
+
+#endif /* FFTHANDLER_H_ */

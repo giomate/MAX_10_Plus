@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\Tone_Generator\tones_generator_sys.qsys --block-symbol-file --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\Tone_Generator\tones_generator_sys --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading Tone_Generator/tones_generator_sys.qsys
+Progress: Reading input file
+Progress: Adding dac_tones_generator_0 [dac_tones_generator 1.0]
+Progress: Parameterizing module dac_tones_generator_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\Tone_Generator\tones_generator_sys.qsys --synthesis=VERILOG --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\Tone_Generator\tones_generator_sys\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading Tone_Generator/tones_generator_sys.qsys
+Progress: Reading input file
+Progress: Adding dac_tones_generator_0 [dac_tones_generator 1.0]
+Progress: Parameterizing module dac_tones_generator_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: tones_generator_sys: Generating tones_generator_sys "tones_generator_sys" for QUARTUS_SYNTH
+Info: dac_tones_generator_0: "tones_generator_sys" instantiated dac_tones_generator "dac_tones_generator_0"
+Info: tones_generator_sys: Done "tones_generator_sys" with 2 modules, 6 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

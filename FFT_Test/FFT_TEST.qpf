@@ -1,0 +1,6 @@
+DATE = "20:30:25 February 18, 2021"
+QUARTUS_VERSION = "15.0"
+
+# Revisions
+
+PROJECT_REVISION = "FFT_TEST"

@@ -1,0 +1,104 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\fft_loop_test.qsys --block-symbol-file --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\fft_loop_test --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading FFT_Test/fft_loop_test.qsys
+Progress: Reading input file
+Progress: Adding adc_in2_ch0_converter_0 [adc_in2_ch0_converter 1.0]
+Progress: Parameterizing module adc_in2_ch0_converter_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dac_tones_generator_0 [dac_tones_generator 1.0]
+Progress: Parameterizing module dac_tones_generator_0
+Progress: Adding index_fft_0 [index_fft 1.0]
+Progress: Parameterizing module index_fft_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 20.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 20.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pio_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module pio_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: fft_loop_test.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\fft_loop_test.qsys --synthesis=VERILOG --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\fft_loop_test\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading FFT_Test/fft_loop_test.qsys
+Progress: Reading input file
+Progress: Adding adc_in2_ch0_converter_0 [adc_in2_ch0_converter 1.0]
+Progress: Parameterizing module adc_in2_ch0_converter_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dac_tones_generator_0 [dac_tones_generator 1.0]
+Progress: Parameterizing module dac_tones_generator_0
+Progress: Adding index_fft_0 [index_fft 1.0]
+Progress: Parameterizing module index_fft_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 20.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 20.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pio_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module pio_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: fft_loop_test.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: fft_loop_test: Generating fft_loop_test "fft_loop_test" for QUARTUS_SYNTH
+Info: adc_in2_ch0_converter_0: "fft_loop_test" instantiated adc_in2_ch0_converter "adc_in2_ch0_converter_0"
+Info: dac_tones_generator_0: "fft_loop_test" instantiated dac_tones_generator "dac_tones_generator_0"
+Info: index_fft_0: "fft_loop_test" instantiated index_fft "index_fft_0"
+Info: jtag_uart_0: Starting RTL generation for module 'fft_loop_test_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=fft_loop_test_jtag_uart_0 --dir=C:/Users/giova/AppData/Local/Temp/alt8677_8866004976897718224.dir/0005_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/giova/AppData/Local/Temp/alt8677_8866004976897718224.dir/0005_jtag_uart_0_gen//fft_loop_test_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'fft_loop_test_jtag_uart_0'
+Info: jtag_uart_0: "fft_loop_test" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: nios2_gen2_0: "fft_loop_test" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'fft_loop_test_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=fft_loop_test_onchip_memory2_0 --dir=C:/Users/giova/AppData/Local/Temp/alt8677_8866004976897718224.dir/0006_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/giova/AppData/Local/Temp/alt8677_8866004976897718224.dir/0006_onchip_memory2_0_gen//fft_loop_test_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'fft_loop_test_onchip_memory2_0'
+Info: onchip_memory2_0: "fft_loop_test" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: pio_0: Starting RTL generation for module 'fft_loop_test_pio_0'
+Info: pio_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=fft_loop_test_pio_0 --dir=C:/Users/giova/AppData/Local/Temp/alt8677_8866004976897718224.dir/0007_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/giova/AppData/Local/Temp/alt8677_8866004976897718224.dir/0007_pio_0_gen//fft_loop_test_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0: Done RTL generation for module 'fft_loop_test_pio_0'
+Info: pio_0: "fft_loop_test" instantiated altera_avalon_pio "pio_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "fft_loop_test" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "fft_loop_test" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "fft_loop_test" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'fft_loop_test_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=fft_loop_test_nios2_gen2_0_cpu --dir=C:/Users/giova/AppData/Local/Temp/alt8677_8866004976897718224.dir/0010_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/giova/AppData/Local/Temp/alt8677_8866004976897718224.dir/0010_cpu_gen//fft_loop_test_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2021.02.19 09:01:06 (*) Starting Nios II generation
+Info: cpu: # 2021.02.19 09:01:06 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2021.02.19 09:01:06 (*)   Creating all objects for CPU
+Info: cpu: # 2021.02.19 09:01:07 (*)   Generating RTL from CPU objects
+Info: cpu: # 2021.02.19 09:01:07 (*)   Creating plain-text RTL
+Info: cpu: # 2021.02.19 09:01:07 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'fft_loop_test_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/fft_loop_test/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: fft_loop_test: Done "fft_loop_test" with 25 modules, 542 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

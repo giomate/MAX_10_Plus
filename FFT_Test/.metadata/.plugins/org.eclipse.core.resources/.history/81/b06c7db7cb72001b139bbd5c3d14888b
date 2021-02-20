@@ -1,0 +1,39 @@
+/*
+ * FFTHANDLER.cpp
+ *
+ *  Created on: Feb 19, 2021
+ *      Author: giova
+ */
+
+#include "FFTHANDLER.h"
+#include "sys/alt_irq.h"
+#include "altera_avalon_pio_regs.h"
+static int dummy=0;
+FFT_HANDLER::FFT_HANDLER(){
+	// TODO Auto-generated constructor stub
+	base_address=PIO_0_BASE;
+	last_index=0;
+	max_index=0;
+}
+
+FFT_HANDLER::~FFT_HANDLER() {
+	// TODO Auto-generated destructor stub
+}
+
+bool FFT_HANDLER::Init(void){
+	base_address=PIO_0_BASE;
+	return base_address>0;
+}
+
+uint8_t FFT_HANDLER::Read_Index(void){
+	last_index=max_index;
+	max_index=IORD_ALTERA_AVALON_PIO_DATA(base_address);
+	return max_index;
+}
+uint16_t FFT_HANDLER::Read_DAC_Value(void){
+
+	dac_value=IORD_16DIRECT(PIO_1_BASE);
+	return dac_value;
+}
+
+FFT_HANDLER dummy2;

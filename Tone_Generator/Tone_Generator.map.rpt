@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Tone_Generator
-Thu Feb 18 15:09:30 2021
+Fri Feb 19 20:39:11 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -19,13 +19,14 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Parameter Settings for User Entity Instance: pll100:pll100MHz|altpll:altpll_component
- 14. altpll Parameter Settings by Entity Instance
- 15. Port Connectivity Checks: "DAC16:dac|raw_sine_wave:sine_wave"
- 16. Port Connectivity Checks: "DAC16:dac"
- 17. Port Connectivity Checks: "pll100:pll100MHz"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: counter:c20|lpm_counter:LPM_COUNTER_component
+ 15. altpll Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "DAC16:dac|raw_sine_wave:sine_wave"
+ 17. Port Connectivity Checks: "DAC16:dac"
+ 18. Port Connectivity Checks: "pll100:pll100MHz"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -52,15 +53,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 18 15:09:30 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Feb 19 20:39:11 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Tone_Generator                              ;
 ; Top-level Entity Name              ; Tone_Generator                              ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 272                                         ;
-;     Total combinational functions  ; 265                                         ;
-;     Dedicated logic registers      ; 58                                          ;
-; Total registers                    ; 58                                          ;
+; Total logic elements               ; 312                                         ;
+;     Total combinational functions  ; 305                                         ;
+;     Dedicated logic registers      ; 94                                          ;
+; Total registers                    ; 94                                          ;
 ; Total pins                         ; 71                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -184,6 +185,7 @@ https://fpgasoftware.intel.com/eula.
 ; ../Sine_Wave/sine_wave/enable_sine_wave.v ; yes             ; User Verilog HDL File        ; C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Sine_Wave/sine_wave/enable_sine_wave.v ;         ;
 ; pll100.v                                  ; yes             ; User Wizard-Generated File   ; C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/pll100.v                ;         ;
 ; DAC16.v                                   ; yes             ; User Verilog HDL File        ; C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/DAC16.v                 ;         ;
+; counter.v                                 ; yes             ; User Wizard-Generated File   ; C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/counter.v               ;         ;
 ; tone_generator.v                          ; yes             ; Auto-Found Verilog HDL File  ; C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v        ;         ;
 ; altpll.tdf                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf                             ;         ;
 ; aglobal201.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                         ;         ;
@@ -191,6 +193,17 @@ https://fpgasoftware.intel.com/eula.
 ; stratixii_pll.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratixii_pll.inc                      ;         ;
 ; cycloneii_pll.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cycloneii_pll.inc                      ;         ;
 ; db/pll100_altpll.v                        ; yes             ; Auto-Generated Megafunction  ; C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/db/pll100_altpll.v      ;         ;
+; lpm_counter.tdf                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf                        ;         ;
+; lpm_constant.inc                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc                       ;         ;
+; lpm_decode.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                         ;         ;
+; lpm_add_sub.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                        ;         ;
+; cmpconst.inc                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cmpconst.inc                           ;         ;
+; lpm_compare.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc                        ;         ;
+; lpm_counter.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc                        ;         ;
+; dffeea.inc                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffeea.inc                             ;         ;
+; alt_counter_stratix.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                ;         ;
+; db/cntr_doi.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/db/cntr_doi.tdf         ;         ;
+; db/cmpr_usb.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/db/cmpr_usb.tdf         ;         ;
 +-------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
@@ -199,20 +212,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                       ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 272                                                                                                         ;
+; Estimated Total logic elements              ; 312                                                                                                         ;
 ;                                             ;                                                                                                             ;
-; Total combinational functions               ; 265                                                                                                         ;
+; Total combinational functions               ; 305                                                                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                                                                             ;
-;     -- 4 input functions                    ; 166                                                                                                         ;
-;     -- 3 input functions                    ; 43                                                                                                          ;
-;     -- <=2 input functions                  ; 56                                                                                                          ;
+;     -- 4 input functions                    ; 179                                                                                                         ;
+;     -- 3 input functions                    ; 44                                                                                                          ;
+;     -- <=2 input functions                  ; 82                                                                                                          ;
 ;                                             ;                                                                                                             ;
 ; Logic elements by mode                      ;                                                                                                             ;
-;     -- normal mode                          ; 233                                                                                                         ;
-;     -- arithmetic mode                      ; 32                                                                                                          ;
+;     -- normal mode                          ; 252                                                                                                         ;
+;     -- arithmetic mode                      ; 53                                                                                                          ;
 ;                                             ;                                                                                                             ;
-; Total registers                             ; 58                                                                                                          ;
-;     -- Dedicated logic registers            ; 58                                                                                                          ;
+; Total registers                             ; 94                                                                                                          ;
+;     -- Dedicated logic registers            ; 94                                                                                                          ;
 ;     -- I/O registers                        ; 0                                                                                                           ;
 ;                                             ;                                                                                                             ;
 ; I/O pins                                    ; 71                                                                                                          ;
@@ -223,9 +236,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                                           ;
 ;                                             ;                                                                                                             ;
 ; Maximum fan-out node                        ; DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave|address_cnt1[5] ;
-; Maximum fan-out                             ; 107                                                                                                         ;
-; Total fan-out                               ; 1173                                                                                                        ;
-; Average fan-out                             ; 2.42                                                                                                        ;
+; Maximum fan-out                             ; 104                                                                                                         ;
+; Total fan-out                               ; 1411                                                                                                        ;
+; Average fan-out                             ; 2.52                                                                                                        ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------+
 
 
@@ -234,11 +247,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                         ; Entity Name      ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------+------------------+--------------+
-; |Tone_Generator                                ; 265 (0)             ; 58 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |Tone_Generator                                                                                             ; Tone_Generator   ; work         ;
-;    |DAC16:dac|                                 ; 265 (62)            ; 58 (51)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|DAC16:dac                                                                                   ; DAC16            ; work         ;
-;       |raw_sine_wave:sine_wave|                ; 203 (0)             ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|DAC16:dac|raw_sine_wave:sine_wave                                                           ; raw_sine_wave    ; work         ;
-;          |enable_sine_wave:u_enable_sine_wave| ; 203 (16)            ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave                       ; enable_sine_wave ; work         ;
-;             |Sine_Wave:u_Sine_Wave|            ; 187 (187)           ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave ; Sine_Wave        ; work         ;
+; |Tone_Generator                                ; 305 (8)             ; 94 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |Tone_Generator                                                                                             ; Tone_Generator   ; work         ;
+;    |DAC16:dac|                                 ; 272 (62)            ; 60 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|DAC16:dac                                                                                   ; DAC16            ; work         ;
+;       |raw_sine_wave:sine_wave|                ; 210 (0)             ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|DAC16:dac|raw_sine_wave:sine_wave                                                           ; raw_sine_wave    ; work         ;
+;          |enable_sine_wave:u_enable_sine_wave| ; 210 (16)            ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave                       ; enable_sine_wave ; work         ;
+;             |Sine_Wave:u_Sine_Wave|            ; 194 (194)           ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave ; Sine_Wave        ; work         ;
+;    |counter:c20|                               ; 25 (0)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|counter:c20                                                                                 ; counter          ; work         ;
+;       |lpm_counter:LPM_COUNTER_component|      ; 25 (0)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|counter:c20|lpm_counter:LPM_COUNTER_component                                               ; lpm_counter      ; work         ;
+;          |cntr_doi:auto_generated|             ; 25 (22)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|counter:c20|lpm_counter:LPM_COUNTER_component|cntr_doi:auto_generated                       ; cntr_doi         ; work         ;
+;             |cmpr_usb:cmpr1|                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|counter:c20|lpm_counter:LPM_COUNTER_component|cntr_doi:auto_generated|cmpr_usb:cmpr1        ; cmpr_usb         ; work         ;
 ;    |pll100:pll100MHz|                          ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|pll100:pll100MHz                                                                            ; pll100           ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|pll100:pll100MHz|altpll:altpll_component                                                    ; altpll           ; work         ;
 ;          |pll100_altpll:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Tone_Generator|pll100:pll100MHz|altpll:altpll_component|pll100_altpll:auto_generated                       ; pll100_altpll    ; work         ;
@@ -251,6 +268,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                  ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+----------------------------------+-----------------+
+; Altera ; LPM_COUNTER  ; 20.1    ; N/A          ; N/A          ; |Tone_Generator|counter:c20      ; counter.v       ;
 ; Altera ; ALTPLL       ; 20.1    ; N/A          ; N/A          ; |Tone_Generator|pll100:pll100MHz ; pll100.v        ;
 +--------+--------------+---------+--------------+--------------+----------------------------------+-----------------+
 
@@ -291,12 +309,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 58    ;
-; Number of registers using Synchronous Clear  ; 12    ;
-; Number of registers using Synchronous Load   ; 8     ;
+; Total registers                              ; 94    ;
+; Number of registers using Synchronous Clear  ; 13    ;
+; Number of registers using Synchronous Load   ; 28    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 38    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -685,6 +703,33 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:c20|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+-----------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                ;
++------------------------+-------------+-----------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                      ;
+; LPM_WIDTH              ; 20          ; Signed Integer                                      ;
+; LPM_DIRECTION          ; UP          ; Untyped                                             ;
+; LPM_MODULUS            ; 1000000     ; Signed Integer                                      ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                             ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                             ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                             ;
+; DEVICE_FAMILY          ; MAX 10      ; Untyped                                             ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                             ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                  ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                  ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                             ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                             ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                             ;
+; CBXI_PARAMETER         ; cntr_doi    ; Untyped                                             ;
++------------------------+-------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                             ;
 +-------------------------------+------------------------------------------+
@@ -713,16 +758,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "DAC16:dac"                                                                                                                     ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                     ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
-; RESET_N ; Input  ; Info     ; Stuck at VCC                                                                                                                ;
-; DATA16  ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "DATA16[15..1]" have no fanouts ;
-; DATA16  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                         ;
-; TR_CK   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                    ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DAC16:dac"                                                                                                       ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                  ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; RESET_N      ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; DATA16[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; TR_CK        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -740,25 +784,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 71                          ;
-; cycloneiii_ff         ; 58                          ;
-;     ENA               ; 24                          ;
-;     SCLR              ; 12                          ;
-;     SLD               ; 8                           ;
-;     plain             ; 14                          ;
+; cycloneiii_ff         ; 94                          ;
+;     ENA               ; 38                          ;
+;     SCLR              ; 13                          ;
+;     SLD               ; 28                          ;
+;     plain             ; 15                          ;
 ; cycloneiii_io_obuf    ; 18                          ;
-; cycloneiii_lcell_comb ; 266                         ;
-;     arith             ; 32                          ;
-;         2 data inputs ; 32                          ;
-;     normal            ; 234                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 43                          ;
-;         4 data inputs ; 166                         ;
+; cycloneiii_lcell_comb ; 305                         ;
+;     arith             ; 53                          ;
+;         2 data inputs ; 53                          ;
+;     normal            ; 252                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 44                          ;
+;         4 data inputs ; 179                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.50                        ;
-; Average LUT depth     ; 4.47                        ;
+; Max LUT depth         ; 8.20                        ;
+; Average LUT depth     ; 4.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -767,7 +811,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -777,7 +821,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 18 15:09:13 2021
+    Info: Processing started: Fri Feb 19 20:38:55 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Tone_Generator -c Tone_Generator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -791,19 +835,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll100.
     Info (12023): Found entity 1: pll100 File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/pll100.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file dac16.v
     Info (12023): Found entity 1: DAC16 File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/DAC16.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter.v
+    Info (12023): Found entity 1: counter File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/counter.v Line: 40
 Warning (12125): Using design file tone_generator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Tone_Generator File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at tone_generator.v(88): created implicit net for "DATA16" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 88
 Info (12127): Elaborating entity "Tone_Generator" for the top level hierarchy
-Warning (10034): Output port "HEX0" at tone_generator.v(25) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 25
-Warning (10034): Output port "HEX1" at tone_generator.v(26) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 26
+Warning (10034): Output port "LEDR[9..5]" at tone_generator.v(22) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 22
 Warning (10034): Output port "FLASH_DCLK" at tone_generator.v(35) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 35
 Warning (10034): Output port "FLASH_NCSO" at tone_generator.v(36) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 36
 Warning (10034): Output port "FLASH_RESET_n" at tone_generator.v(37) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 37
 Warning (10034): Output port "PM_I2C_SCL" at tone_generator.v(40) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 40
 Warning (10034): Output port "UART_RESET_n" at tone_generator.v(50) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 50
 Warning (10034): Output port "UART_TX" at tone_generator.v(52) has no driver File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 52
-Info (12128): Elaborating entity "pll100" for hierarchy "pll100:pll100MHz" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 80
+Info (12128): Elaborating entity "pll100" for hierarchy "pll100:pll100MHz" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 82
 Info (12128): Elaborating entity "altpll" for hierarchy "pll100:pll100MHz|altpll:altpll_component" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/pll100.v Line: 95
 Info (12130): Elaborated megafunction instantiation "pll100:pll100MHz|altpll:altpll_component" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/pll100.v Line: 95
 Info (12133): Instantiated megafunction "pll100:pll100MHz|altpll:altpll_component" with the following parameter: File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/pll100.v Line: 95
@@ -865,13 +909,27 @@ Info (12133): Instantiated megafunction "pll100:pll100MHz|altpll:altpll_componen
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll100_altpll.v
     Info (12023): Found entity 1: pll100_altpll File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/db/pll100_altpll.v Line: 30
 Info (12128): Elaborating entity "pll100_altpll" for hierarchy "pll100:pll100MHz|altpll:altpll_component|pll100_altpll:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "DAC16" for hierarchy "DAC16:dac" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 93
-Warning (10036): Verilog HDL or VHDL warning at DAC16.v(32): object "BASE" assigned a value but never read File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/DAC16.v Line: 32
-Warning (10230): Verilog HDL assignment warning at DAC16.v(60): truncated value with size 32 to match size of target (8) File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/DAC16.v Line: 60
-Warning (10230): Verilog HDL assignment warning at DAC16.v(104): truncated value with size 32 to match size of target (5) File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/DAC16.v Line: 104
-Info (12128): Elaborating entity "raw_sine_wave" for hierarchy "DAC16:dac|raw_sine_wave:sine_wave" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/DAC16.v Line: 120
+Info (12128): Elaborating entity "DAC16" for hierarchy "DAC16:dac" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 95
+Warning (10230): Verilog HDL assignment warning at DAC16.v(66): truncated value with size 32 to match size of target (8) File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/DAC16.v Line: 66
+Warning (10230): Verilog HDL assignment warning at DAC16.v(110): truncated value with size 32 to match size of target (6) File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/DAC16.v Line: 110
+Info (12128): Elaborating entity "raw_sine_wave" for hierarchy "DAC16:dac|raw_sine_wave:sine_wave" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/DAC16.v Line: 126
 Info (12128): Elaborating entity "enable_sine_wave" for hierarchy "DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Sine_Wave/sine_wave/raw_sine_wave.v Line: 66
 Info (12128): Elaborating entity "Sine_Wave" for hierarchy "DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Sine_Wave/sine_wave/enable_sine_wave.v Line: 50
+Info (12128): Elaborating entity "counter" for hierarchy "counter:c20" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 103
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "counter:c20|lpm_counter:LPM_COUNTER_component" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/counter.v Line: 65
+Info (12130): Elaborated megafunction instantiation "counter:c20|lpm_counter:LPM_COUNTER_component" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/counter.v Line: 65
+Info (12133): Instantiated megafunction "counter:c20|lpm_counter:LPM_COUNTER_component" with the following parameter: File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/counter.v Line: 65
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_modulus" = "1000000"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "20"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_doi.tdf
+    Info (12023): Found entity 1: cntr_doi File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/db/cntr_doi.tdf Line: 28
+Info (12128): Elaborating entity "cntr_doi" for hierarchy "counter:c20|lpm_counter:LPM_COUNTER_component|cntr_doi:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_usb.tdf
+    Info (12023): Found entity 1: cmpr_usb File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/db/cmpr_usb.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_usb" for hierarchy "counter:c20|lpm_counter:LPM_COUNTER_component|cntr_doi:auto_generated|cmpr_usb:cmpr1" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/db/cntr_doi.tdf Line: 135
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "DAC_DATA" and its non-tri-state driver. File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 29
@@ -896,20 +954,11 @@ Warning (13039): The following bidirectional pins have no drivers
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "DAC_DATA~synth" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 29
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 25
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 25
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 25
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 25
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 25
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 25
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 25
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 26
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 26
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 26
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 26
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 26
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 26
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 26
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 22
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 22
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 22
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 22
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 22
     Warning (13410): Pin "FLASH_DCLK" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 35
     Warning (13410): Pin "FLASH_NCSO" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 36
     Warning (13410): Pin "FLASH_RESET_n" is stuck at GND File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 37
@@ -920,7 +969,7 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 23 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_CLK_10" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 9
     Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 11
     Warning (15610): No output dependent on input pin "MAX10_CLK3_50" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 12
@@ -930,17 +979,22 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 16
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 16
     Warning (15610): No output dependent on input pin "KEY[4]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 16
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 19
     Warning (15610): No output dependent on input pin "UART_RX" File: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tone_generator.v Line: 51
-Info (21057): Implemented 344 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 398 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
     Info (21059): Implemented 32 output pins
     Info (21060): Implemented 18 bidirectional pins
-    Info (21061): Implemented 272 logic cells
+    Info (21061): Implemented 326 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Thu Feb 18 15:09:30 2021
-    Info: Elapsed time: 00:00:17
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 4810 megabytes
+    Info: Processing ended: Fri Feb 19 20:39:11 2021
+    Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:33
 
 

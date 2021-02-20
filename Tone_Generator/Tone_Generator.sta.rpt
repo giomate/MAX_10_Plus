@@ -1,5 +1,5 @@
 Timing Analyzer report for Tone_Generator
-Thu Feb 18 15:10:00 2021
+Fri Feb 19 20:39:35 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -93,12 +93,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.12        ;
+; Average used               ; 1.15        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   1.7%      ;
+;     Processor 2            ;   2.1%      ;
+;     Processors 3-8         ;   2.1%      ;
 +----------------------------+-------------+
 
 
@@ -107,7 +108,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------+--------+--------------------------+
 ; SDC File Path      ; Status ; Read at                  ;
 +--------------------+--------+--------------------------+
-; Tone_Generator.SDC ; OK     ; Thu Feb 18 15:09:57 2021 ;
+; Tone_Generator.SDC ; OK     ; Fri Feb 19 20:39:32 2021 ;
 +--------------------+--------+--------------------------+
 
 
@@ -129,7 +130,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                            ; Note ;
 +------------+-----------------+-------------------------------------------------------+------+
-; 348.19 MHz ; 348.19 MHz      ; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ;      ;
+; 217.86 MHz ; 217.86 MHz      ; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ;      ;
 +------------+-----------------+-------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -139,7 +140,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------+-------+---------------+
 ; Clock                                                 ; Slack ; End Point TNS ;
 +-------------------------------------------------------+-------+---------------+
-; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 7.128 ; 0.000         ;
+; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 5.410 ; 0.000         ;
 +-------------------------------------------------------+-------+---------------+
 
 
@@ -169,7 +170,7 @@ No paths to report.
 +-------------------------------------------------------+--------+---------------+
 ; Clock                                                 ; Slack  ; End Point TNS ;
 +-------------------------------------------------------+--------+---------------+
-; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 4.756  ; 0.000         ;
+; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 4.755  ; 0.000         ;
 ; MAX10_CLK1_50                                         ; 9.792  ; 0.000         ;
 ; MAX10_CLK2_50                                         ; 16.000 ; 0.000         ;
 ; MAX10_CLK3_50                                         ; 16.000 ; 0.000         ;
@@ -188,7 +189,7 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                            ; Note ;
 +------------+-----------------+-------------------------------------------------------+------+
-; 374.95 MHz ; 374.95 MHz      ; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ;      ;
+; 238.44 MHz ; 238.44 MHz      ; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ;      ;
 +------------+-----------------+-------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -198,7 +199,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------+-------+---------------+
 ; Clock                                                 ; Slack ; End Point TNS ;
 +-------------------------------------------------------+-------+---------------+
-; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 7.333 ; 0.000         ;
+; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 5.806 ; 0.000         ;
 +-------------------------------------------------------+-------+---------------+
 
 
@@ -247,7 +248,7 @@ No synchronizer chains to report.
 +-------------------------------------------------------+-------+---------------+
 ; Clock                                                 ; Slack ; End Point TNS ;
 +-------------------------------------------------------+-------+---------------+
-; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 8.672 ; 0.000         ;
+; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 7.799 ; 0.000         ;
 +-------------------------------------------------------+-------+---------------+
 
 
@@ -296,12 +297,12 @@ No synchronizer chains to report.
 +--------------------------------------------------------+-------+-------+----------+---------+---------------------+
 ; Clock                                                  ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------------------------------+-------+-------+----------+---------+---------------------+
-; Worst-case Slack                                       ; 7.128 ; 0.208 ; N/A      ; N/A     ; 4.713               ;
+; Worst-case Slack                                       ; 5.410 ; 0.208 ; N/A      ; N/A     ; 4.713               ;
 ;  ADC_CLK_10                                            ; N/A   ; N/A   ; N/A      ; N/A     ; 96.000              ;
 ;  MAX10_CLK1_50                                         ; N/A   ; N/A   ; N/A      ; N/A     ; 9.532               ;
 ;  MAX10_CLK2_50                                         ; N/A   ; N/A   ; N/A      ; N/A     ; 16.000              ;
 ;  MAX10_CLK3_50                                         ; N/A   ; N/A   ; N/A      ; N/A     ; 16.000              ;
-;  pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 7.128 ; 0.208 ; N/A      ; N/A     ; 4.713               ;
+;  pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 5.410 ; 0.208 ; N/A      ; N/A     ; 4.713               ;
 ; Design-wide TNS                                        ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  ADC_CLK_10                                            ; N/A   ; N/A   ; N/A      ; N/A     ; 0.000               ;
 ;  MAX10_CLK1_50                                         ; N/A   ; N/A   ; N/A      ; N/A     ; 0.000               ;
@@ -384,6 +385,11 @@ No synchronizer chains to report.
 ; KEY[2]              ; 1.5 V Schmitt Trigger ; 1200 ps         ; 1200 ps         ;
 ; KEY[3]              ; 1.5 V Schmitt Trigger ; 1200 ps         ; 1200 ps         ;
 ; KEY[4]              ; 1.5 V Schmitt Trigger ; 1200 ps         ; 1200 ps         ;
+; SW[5]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; SW[6]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; SW[7]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; SW[8]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; SW[9]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
 ; UART_RX             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; FLASH_DATA[0]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; FLASH_DATA[1]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
@@ -408,11 +414,6 @@ No synchronizer chains to report.
 ; SW[2]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
 ; SW[3]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
 ; SW[4]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
-; SW[5]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
-; SW[6]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
-; SW[7]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
-; SW[8]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
-; SW[9]               ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
 ; MAX10_CLK1_50       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -606,7 +607,7 @@ No synchronizer chains to report.
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                            ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 265      ; 0        ; 0        ; 0        ;
+; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 1390     ; 0        ; 0        ; 0        ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -616,7 +617,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                            ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 265      ; 0        ; 0        ; 0        ;
+; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; pll100MHz|altpll_component|auto_generated|pll1|clk[0] ; 1390     ; 0        ; 0        ; 0        ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -639,11 +640,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 1     ; 1    ;
-; Unconstrained Input Ports       ; 10    ; 10   ;
-; Unconstrained Input Port Paths  ; 15    ; 15   ;
-; Unconstrained Output Ports      ; 13    ; 13   ;
-; Unconstrained Output Port Paths ; 13    ; 13   ;
+; Unconstrained Clocks            ; 2     ; 2    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 10    ; 10   ;
+; Unconstrained Output Ports      ; 22    ; 22   ;
+; Unconstrained Output Port Paths ; 22    ; 22   ;
 +---------------------------------+-------+------+
 
 
@@ -654,6 +655,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------------------------------------------------+-------------------------------------------------------+-----------+---------------+
 ; ADC_CLK_10                                            ; ADC_CLK_10                                            ; Base      ; Constrained   ;
 ; DAC16:dac|H_L                                         ;                                                       ; Base      ; Unconstrained ;
+; DAC16:dac|clk_50                                      ;                                                       ; Base      ; Unconstrained ;
 ; MAX10_CLK1_50                                         ; MAX10_CLK1_50                                         ; Base      ; Constrained   ;
 ; MAX10_CLK2_50                                         ; MAX10_CLK2_50                                         ; Base      ; Constrained   ;
 ; MAX10_CLK3_50                                         ; MAX10_CLK3_50                                         ; Base      ; Constrained   ;
@@ -671,11 +673,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[3]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[4]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[6]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[7]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[8]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[9]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -687,16 +684,25 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; DAC_DATA    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_SCLK    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_SYNC_n  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[8]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[9]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -710,11 +716,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[3]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[4]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[6]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[7]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[8]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[9]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -726,16 +727,25 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; DAC_DATA    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_SCLK    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DAC_SYNC_n  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[8]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[9]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -745,7 +755,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 18 15:09:55 2021
+    Info: Processing started: Fri Feb 19 20:39:31 2021
 Info: Command: quartus_sta Tone_Generator -c Tone_Generator
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -757,25 +767,27 @@ Info (332110): Deriving PLL clocks
     Info (332110): create_generated_clock -source {pll100MHz|altpll_component|auto_generated|pll1|inclk[0]} -multiply_by 2 -duty_cycle 50.00 -name {pll100MHz|altpll_component|auto_generated|pll1|clk[0]} {pll100MHz|altpll_component|auto_generated|pll1|clk[0]}
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Warning (332060): Node: DAC16:dac|H_L was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave|address_cnt1[6] is being clocked by DAC16:dac|H_L
+    Info (13166): Register DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave|address_cnt1[4] is being clocked by DAC16:dac|H_L
+Warning (332060): Node: DAC16:dac|clk_50 was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register DAC16:dac|CNT[3] is being clocked by DAC16:dac|clk_50
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Info (332146): Worst-case setup slack is 7.128
+Info (332146): Worst-case setup slack is 5.410
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.128               0.000 pll100MHz|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     5.410               0.000 pll100MHz|altpll_component|auto_generated|pll1|clk[0] 
 Info (332146): Worst-case hold slack is 0.420
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.420               0.000 pll100MHz|altpll_component|auto_generated|pll1|clk[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 4.756
+Info (332146): Worst-case minimum pulse width slack is 4.755
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     4.756               0.000 pll100MHz|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     4.755               0.000 pll100MHz|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):     9.792               0.000 MAX10_CLK1_50 
     Info (332119):    16.000               0.000 MAX10_CLK2_50 
     Info (332119):    16.000               0.000 MAX10_CLK3_50 
@@ -785,12 +797,14 @@ Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: DAC16:dac|H_L was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave|address_cnt1[6] is being clocked by DAC16:dac|H_L
+    Info (13166): Register DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave|address_cnt1[4] is being clocked by DAC16:dac|H_L
+Warning (332060): Node: DAC16:dac|clk_50 was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register DAC16:dac|CNT[3] is being clocked by DAC16:dac|clk_50
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 7.333
+Info (332146): Worst-case setup slack is 5.806
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.333               0.000 pll100MHz|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     5.806               0.000 pll100MHz|altpll_component|auto_generated|pll1|clk[0] 
 Info (332146): Worst-case hold slack is 0.347
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -807,12 +821,14 @@ Info (332146): Worst-case minimum pulse width slack is 4.713
     Info (332119):    96.000               0.000 ADC_CLK_10 
 Info: Analyzing Fast 1200mV 0C Model
 Warning (332060): Node: DAC16:dac|H_L was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave|address_cnt1[6] is being clocked by DAC16:dac|H_L
+    Info (13166): Register DAC16:dac|raw_sine_wave:sine_wave|enable_sine_wave:u_enable_sine_wave|Sine_Wave:u_Sine_Wave|address_cnt1[4] is being clocked by DAC16:dac|H_L
+Warning (332060): Node: DAC16:dac|clk_50 was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register DAC16:dac|CNT[3] is being clocked by DAC16:dac|clk_50
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 8.672
+Info (332146): Worst-case setup slack is 7.799
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.672               0.000 pll100MHz|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     7.799               0.000 pll100MHz|altpll_component|auto_generated|pll1|clk[0] 
 Info (332146): Worst-case hold slack is 0.208
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -829,10 +845,10 @@ Info (332146): Worst-case minimum pulse width slack is 4.798
     Info (332119):    96.000               0.000 ADC_CLK_10 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4871 megabytes
-    Info: Processing ended: Thu Feb 18 15:10:00 2021
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4873 megabytes
+    Info: Processing ended: Fri Feb 19 20:39:35 2021
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

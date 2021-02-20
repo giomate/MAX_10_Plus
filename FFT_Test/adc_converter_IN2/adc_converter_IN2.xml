@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2021.02.19.09:12:06"
+ outputDirectory="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="MAX 10"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10M50DAF484C6GES"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="adc_out" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="adc_data" direction="output" role="rx_in" width="12" />
+  </interface>
+  <interface name="clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="adc_converter_IN2:1.0:AUTO_CLOCK_CLOCK_DOMAIN=-1,AUTO_CLOCK_CLOCK_RATE=-1,AUTO_CLOCK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C6GES,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1613722325,AUTO_UNIQUE_ID=(adc_in2_ch0_converter:1.0:)"
+   instancePathKey="adc_converter_IN2"
+   kind="adc_converter_IN2"
+   version="1.0"
+   name="adc_converter_IN2">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLOCK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1613722325" />
+  <parameter name="AUTO_DEVICE" value="10M50DAF484C6GES" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/adc_converter_IN2.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/adc_converter_qip.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/pll10.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/pll10.qip"
+       type="OTHER"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/anain2_converter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/anain2_converter.qip"
+       type="OTHER"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/ADC_Converter/adc_in2_ch0_converter_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="adc_converter_IN2">queue size: 0 starting:adc_converter_IN2 "adc_converter_IN2"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="adc_converter_IN2"><![CDATA["<b>adc_converter_IN2</b>" reuses <b>adc_in2_ch0_converter</b> "<b>submodules/adc_converter_qip</b>"]]></message>
+   <message level="Debug" culprit="adc_converter_IN2">queue size: 0 starting:adc_in2_ch0_converter "submodules/adc_converter_qip"</message>
+   <message level="Info" culprit="adc_in2_ch0_converter_0"><![CDATA["<b>adc_converter_IN2</b>" instantiated <b>adc_in2_ch0_converter</b> "<b>adc_in2_ch0_converter_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="adc_in2_ch0_converter:1.0:"
+   instancePathKey="adc_converter_IN2:.:adc_in2_ch0_converter_0"
+   kind="adc_in2_ch0_converter"
+   version="1.0"
+   name="adc_converter_qip">
+  <generatedFiles>
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/adc_converter_qip.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/pll10.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/pll10.qip"
+       type="OTHER"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/anain2_converter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/FFT_Test/adc_converter_IN2/synthesis/submodules/anain2_converter.qip"
+       type="OTHER"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/ADC_Converter/adc_in2_ch0_converter_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="adc_converter_IN2" as="adc_in2_ch0_converter_0" />
+  <messages>
+   <message level="Debug" culprit="adc_converter_IN2">queue size: 0 starting:adc_in2_ch0_converter "submodules/adc_converter_qip"</message>
+   <message level="Info" culprit="adc_in2_ch0_converter_0"><![CDATA["<b>adc_converter_IN2</b>" instantiated <b>adc_in2_ch0_converter</b> "<b>adc_in2_ch0_converter_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

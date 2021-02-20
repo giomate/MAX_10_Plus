@@ -1,0 +1,13 @@
+	component fft_loop_test is
+		port (
+			clk_clk                                    : in  std_logic                    := 'X';             -- clk
+			dac_tones_generator_0_spi_data_data        : out std_logic;                                       -- data
+			dac_tones_generator_0_spi_data_spi_clk     : out std_logic;                                       -- spi_clk
+			dac_tones_generator_0_spi_data_spi_sync    : out std_logic;                                       -- spi_sync
+			dac_tones_generator_0_switches_switches_in : in  std_logic_vector(4 downto 0) := (others => 'X'); -- switches_in
+			index_fft_0_index_out_max_index_byte       : out std_logic_vector(7 downto 0);                    -- max_index_byte
+			pio_0_external_connection_export           : out std_logic_vector(7 downto 0);                    -- export
+			reset_reset_n                              : in  std_logic                    := 'X'              -- reset_n
+		);
+	end component fft_loop_test;
+
