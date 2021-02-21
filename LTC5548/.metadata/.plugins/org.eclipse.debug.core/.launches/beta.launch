@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.altera.sbt4e.launch.hardware.Nios2HardwareLaunch">
-<stringAttribute key="bytestreamCableName" value="NEEK10 on localhost (USB-1)"/>
-<stringAttribute key="bytestreamDeviceName" value="10M50DA(.|ES)|10M50DC"/>
+<stringAttribute key="bytestreamCableName" value="10M50DA(.|ES)|10M50DC"/>
 <stringAttribute key="bytestreamPath" value="/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0"/>
 <stringAttribute key="bytestreamprocessorDeviceIndex" value="1"/>
 <stringAttribute key="bytestreamprocessorInstanceId" value="0"/>
 <booleanAttribute key="checkSysid" value="false"/>
 <booleanAttribute key="checkTimestamp" value="false"/>
-<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="56841"/>
+<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="56456"/>
 <booleanAttribute key="connectToConsole" value="true"/>
 <booleanAttribute key="downloadElf" value="true"/>
 <stringAttribute key="elfFile" value="ltc5549_test_app.elf"/>

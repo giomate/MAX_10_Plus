@@ -120,8 +120,8 @@ pll100 pll100MHz(
 ltc5548_sys cpu(
 		.adc_in2_ch0_converter_0_adc_out_rx_in(adc_data), // adc_in2_ch0_converter_0_adc_out.rx_in
 		.clk_clk(pll100_clk),                               //                             clk.clk
-		.index_fft_0_index_out_max_index_byte(max_index),  //           index_fft_0_index_out.max_index_byte
-		.index_fft_0_rx_input_rx_in(adc_data),            //            index_fft_0_rx_input.rx_in
+		.index_fft_0_output_uint8(max_index),  //           index_fft_0_index_out.max_index_byte
+		.index_fft_0_input_uint12(adc_data),            //            index_fft_0_rx_input.rx_in
 		.pio_0_external_connection_export(PLL_LOCKED),      //       pio_0_external_connection.export
 		.pio_1_external_connection_export(adc_data),      //       pio_1_external_connection.export
 		.pio_2_external_connection_export(max_index)   ,   //       pio_2_external_connection.export
@@ -142,7 +142,7 @@ always@* begin
 	end
 end
 assign LEDR[9]=led_value[0];
-
+assign LEDR[7:0]=max_index;
 assign voltage_value = adc_data / 163;
 	
 	always@(*)

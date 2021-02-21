@@ -29,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "11";
          type = "int";
       }
    }
@@ -117,7 +117,7 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "8";
          type = "int";
       }
    }
@@ -133,7 +133,7 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "9";
          type = "int";
       }
    }
@@ -165,7 +165,7 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "10";
          type = "int";
       }
    }
@@ -205,13 +205,13 @@
    dir="end" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
-   name="index_fft_0_index_out"
-   internal="index_fft_0.index_out"
+   name="index_fft_0_input"
+   internal="index_fft_0.input"
    type="conduit"
    dir="end" />
  <interface
-   name="index_fft_0_rx_input"
-   internal="index_fft_0.rx_input"
+   name="index_fft_0_output"
+   internal="index_fft_0.output"
    type="conduit"
    dir="end" />
  <interface
@@ -514,7 +514,7 @@
   <parameter name="width" value="12" />
  </module>
  <module name="pio_2" kind="altera_avalon_pio" version="20.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="true" />
+  <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="true" />
   <parameter name="clockRate" value="100000000" />
@@ -778,11 +778,6 @@
    version="20.1"
    start="clk_0.clk_reset"
    end="adc_in2_ch0_converter_0.reset" />
- <connection
-   kind="reset"
-   version="20.1"
-   start="clk_0.clk_reset"
-   end="index_fft_0.reset" />
  <connection kind="reset" version="20.1" start="clk_0.clk_reset" end="pio_2.reset" />
  <connection kind="reset" version="20.1" start="clk_0.clk_reset" end="pio_3.reset" />
  <connection
@@ -790,6 +785,11 @@
    version="20.1"
    start="clk_0.clk_reset"
    end="timer_0.reset" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="clk_0.clk_reset"
+   end="index_fft_0.reset" />
  <connection
    kind="reset"
    version="20.1"

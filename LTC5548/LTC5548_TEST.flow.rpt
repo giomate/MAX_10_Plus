@@ -1,5 +1,5 @@
 Flow report for LTC5548_TEST
-Sun Feb 21 14:57:53 2021
+Sun Feb 21 21:54:40 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,21 +41,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Feb 21 14:57:43 2021       ;
+; Flow Status                        ; Successful - Sun Feb 21 21:54:07 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; LTC5548_TEST                                ;
 ; Top-level Entity Name              ; LTC5548_TEST                                ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 2,592 / 49,760 ( 5 % )                      ;
-;     Total combinational functions  ; 2,390 / 49,760 ( 5 % )                      ;
-;     Dedicated logic registers      ; 1,381 / 49,760 ( 3 % )                      ;
-; Total registers                    ; 1381                                        ;
+; Total logic elements               ; 33,407 / 49,760 ( 67 % )                    ;
+;     Total combinational functions  ; 28,438 / 49,760 ( 57 % )                    ;
+;     Dedicated logic registers      ; 21,078 / 49,760 ( 42 % )                    ;
+; Total registers                    ; 21078                                       ;
 ; Total pins                         ; 83 / 360 ( 23 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 1,059,840 / 1,677,312 ( 63 % )              ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total memory bits                  ; 1,065,385 / 1,677,312 ( 64 % )              ;
+; Embedded Multiplier 9-bit elements ; 258 / 288 ( 90 % )                          ;
 ; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 1 / 2 ( 50 % )                              ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/21/2021 14:55:01 ;
+; Start date & time ; 02/21/2021 21:45:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LTC5548_TEST        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 220837864969264.161391570103768                               ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 220837864969264.161394031803228                               ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ltc5548_sys/synthesis/../ltc5548_sys.cmp                      ; --            ; --          ; --         ;
@@ -96,7 +96,7 @@ https://fpgasoftware.intel.com/eula.
 ; SEARCH_PATH                         ; software/ltc5549_test_app/mem_init/                           ; --            ; --          ; --         ;
 ; SLD_FILE                            ; ltc5548_sys/synthesis/ltc5548_sys.regmap                      ; --            ; --          ; --         ;
 ; SLD_FILE                            ; ltc5548_sys/synthesis/ltc5548_sys.debuginfo                   ; --            ; --          ; --         ;
-; SLD_INFO                            ; QSYS_NAME ltc5548_sys HAS_SOPCINFO 1 GENERATION_ID 1613907282 ; --            ; ltc5548_sys ; --         ;
+; SLD_INFO                            ; QSYS_NAME ltc5548_sys HAS_SOPCINFO 1 GENERATION_ID 1613940273 ; --            ; ltc5548_sys ; --         ;
 ; SOPCINFO_FILE                       ; ltc5548_sys/synthesis/../../ltc5548_sys.sopcinfo              ; --            ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --          ; --         ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
@@ -107,11 +107,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:31     ; 1.0                     ; 5241 MB             ; 00:01:44                           ;
-; Fitter               ; 00:00:42     ; 1.4                     ; 6005 MB             ; 00:01:13                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4721 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:08     ; 2.3                     ; 4921 MB             ; 00:00:14                           ;
-; Total                ; 00:02:26     ; --                      ; --                  ; 00:03:16                           ;
+; Analysis & Synthesis ; 00:03:04     ; 1.0                     ; 5374 MB             ; 00:03:29                           ;
+; Fitter               ; 00:05:11     ; 1.8                     ; 6549 MB             ; 00:16:19                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4838 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:31     ; 3.9                     ; 5224 MB             ; 00:01:40                           ;
+; Total                ; 00:08:54     ; --                      ; --                  ; 00:21:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -4,19 +4,19 @@
 
 `timescale 1 ps / 1 ps
 module max_index_fft (
-		input  wire        clk_clk,                              //                   clk.clk
-		output wire [7:0]  index_fft_0_index_out_max_index_byte, // index_fft_0_index_out.max_index_byte
-		input  wire [11:0] index_fft_0_rx_input_rx_in,           //  index_fft_0_rx_input.rx_in
-		input  wire        reset_reset_n                         //                 reset.reset_n
+		input  wire        clk_clk,                  //                clk.clk
+		input  wire [11:0] index_fft_0_input_uint12, //  index_fft_0_input.uint12
+		output wire [7:0]  index_fft_0_output_uint8, // index_fft_0_output.uint8
+		input  wire        reset_reset_n             //              reset.reset_n
 	);
 
 	wire    rst_controller_reset_out_reset; // rst_controller:reset_out -> index_fft_0:reset_n
 
 	index_fft_qip index_fft_0 (
-		.max_index (index_fft_0_index_out_max_index_byte), // index_out.max_index_byte
-		.rx_in_fft (index_fft_0_rx_input_rx_in),           //  rx_input.rx_in
-		.clk_in    (clk_clk),                              //     clock.clk
-		.reset_n   (~rst_controller_reset_out_reset)       //     reset.reset_n
+		.clk_in    (clk_clk),                         //  clock.clk
+		.reset_n   (~rst_controller_reset_out_reset), //  reset.reset_n
+		.rx_in_fft (index_fft_0_input_uint12),        //  input.uint12
+		.max_index (index_fft_0_output_uint8)         // output.uint8
 	);
 
 	altera_reset_controller #(

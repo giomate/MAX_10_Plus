@@ -7312,7 +7312,7 @@ Disassembly of section .text:
    2639c:	00026a84 	movi	zero,2474
    263a0:	00026408 	cmpgei	zero,zero,2448
    263a4:	00026a48 	cmpgei	zero,zero,2473
-   263a8:	00026600 	call	2660 <__reset-0x1d9a0>
+   263a8:	00026600 	call	2660 <__alt_mem_onchip_memory2_0-0x1d9a0>
    263ac:	00026a08 	cmpgei	zero,zero,2472
    263b0:	000269fc 	xorhi	zero,zero,2471
    263b4:	00026408 	cmpgei	zero,zero,2448
@@ -13565,7 +13565,7 @@ Disassembly of section .text:
    2c368:	0002c5c8 	cmpgei	zero,zero,2839
    2c36c:	0002c3b0 	cmpltui	zero,zero,2830
    2c370:	0002c3b0 	cmpltui	zero,zero,2830
-   2c374:	0002cb40 	call	2cb4 <__reset-0x1d34c>
+   2c374:	0002cb40 	call	2cb4 <__alt_mem_onchip_memory2_0-0x1d34c>
    2c378:	0023883a 	mov	r17,zero
    2c37c:	113ff404 	addi	r4,r2,-48
    2c380:	880690ba 	slli	r3,r17,2
@@ -17791,7 +17791,7 @@ Disassembly of section .text:
    303e8:	3085883a 	add	r2,r6,r2
    303ec:	1080fd17 	ldw	r2,1012(r2)
    303f0:	1000683a 	jmp	r2
-   303f4:	00030680 	call	3068 <__reset-0x1cf98>
+   303f4:	00030680 	call	3068 <__alt_mem_onchip_memory2_0-0x1cf98>
    303f8:	000304a4 	muli	zero,zero,3090
    303fc:	00030450 	cmplti	zero,zero,3089
    30400:	000305c8 	cmpgei	zero,zero,3095
@@ -20167,19 +20167,19 @@ Disassembly of section .text:
    32840:	000328e8 	cmpgeui	zero,zero,3235
    32844:	000328c8 	cmpgei	zero,zero,3235
    32848:	000328c8 	cmpgei	zero,zero,3235
-   3284c:	000328c0 	call	328c <__reset-0x1cd74>
-   32850:	000328c0 	call	328c <__reset-0x1cd74>
-   32854:	000328c0 	call	328c <__reset-0x1cd74>
-   32858:	000328c0 	call	328c <__reset-0x1cd74>
+   3284c:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   32850:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   32854:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   32858:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
    3285c:	000328c8 	cmpgei	zero,zero,3235
-   32860:	000328c0 	call	328c <__reset-0x1cd74>
-   32864:	000328c0 	call	328c <__reset-0x1cd74>
-   32868:	000328c0 	call	328c <__reset-0x1cd74>
-   3286c:	000328c0 	call	328c <__reset-0x1cd74>
-   32870:	000328c0 	call	328c <__reset-0x1cd74>
-   32874:	000328c0 	call	328c <__reset-0x1cd74>
-   32878:	000328c0 	call	328c <__reset-0x1cd74>
-   3287c:	000328c0 	call	328c <__reset-0x1cd74>
+   32860:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   32864:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   32868:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   3286c:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   32870:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   32874:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   32878:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   3287c:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
    32880:	000328e8 	cmpgeui	zero,zero,3235
    32884:	000328c8 	cmpgei	zero,zero,3235
    32888:	000328c8 	cmpgei	zero,zero,3235
@@ -20187,15 +20187,15 @@ Disassembly of section .text:
    32890:	000328e8 	cmpgeui	zero,zero,3235
    32894:	000328c8 	cmpgei	zero,zero,3235
    32898:	000328c8 	cmpgei	zero,zero,3235
-   3289c:	000328c0 	call	328c <__reset-0x1cd74>
-   328a0:	000328c0 	call	328c <__reset-0x1cd74>
-   328a4:	000328c0 	call	328c <__reset-0x1cd74>
-   328a8:	000328c0 	call	328c <__reset-0x1cd74>
-   328ac:	000328c0 	call	328c <__reset-0x1cd74>
+   3289c:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   328a0:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   328a4:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   328a8:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   328ac:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
    328b0:	000328c8 	cmpgei	zero,zero,3235
    328b4:	000328c8 	cmpgei	zero,zero,3235
-   328b8:	000328c0 	call	328c <__reset-0x1cd74>
-   328bc:	000328c0 	call	328c <__reset-0x1cd74>
+   328b8:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
+   328bc:	000328c0 	call	328c <__alt_mem_onchip_memory2_0-0x1cd74>
    328c0:	0009883a 	mov	r4,zero
    328c4:	00322e80 	call	322e8 <_exit>
    328c8:	00800584 	movi	r2,22

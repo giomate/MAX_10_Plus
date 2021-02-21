@@ -2,8 +2,8 @@
 		port (
 			adc_in2_ch0_converter_0_adc_out_rx_in : out std_logic_vector(11 downto 0);                    -- rx_in
 			clk_clk                               : in  std_logic                     := 'X';             -- clk
-			index_fft_0_index_out_max_index_byte  : out std_logic_vector(7 downto 0);                     -- max_index_byte
-			index_fft_0_rx_input_rx_in            : in  std_logic_vector(11 downto 0) := (others => 'X'); -- rx_in
+			index_fft_0_input_uint12              : in  std_logic_vector(11 downto 0) := (others => 'X'); -- uint12
+			index_fft_0_output_uint8              : out std_logic_vector(7 downto 0);                     -- uint8
 			pio_0_external_connection_export      : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- export
 			pio_1_external_connection_export      : in  std_logic_vector(11 downto 0) := (others => 'X'); -- export
 			pio_2_external_connection_export      : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- export

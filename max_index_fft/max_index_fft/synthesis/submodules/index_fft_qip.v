@@ -26,8 +26,8 @@ module index_fft_qip(
 assign reset_fft=~reset_n;
 
  max_10_index_frequency u0(
- .clk(MAX10_CLK1_50),                           //   :   IN    std_logic;
-        .reset(reset_fft),                      //     :   IN    std_logic;
+ .clk(clk_in),                           //   :   IN    std_logic;
+        .reset(1'b0),                      //     :   IN    std_logic;
         .clk_enable(1'b1)      ,                 //:   IN    std_logic;
         .rx_in (rx_in_fft)   ,                  //    :   IN    std_logic_vector(11 DOWNTO 0);  -- ufix12
       //  .ce_out  (LEDR[0])   ,                 //   :   OUT   std_logic;

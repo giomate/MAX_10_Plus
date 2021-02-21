@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Thu Feb 18 16:06:13 2021
+Analysis & Synthesis Status : Successful - Sun Feb 21 21:35:19 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : index_fft_qip
 Top-level Entity Name : index_fft_qip
 Family : MAX 10
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
+Total logic elements : 34,349
+    Total combinational functions : 26,043
+    Dedicated logic registers : 22,703
+Total registers : 22703
 Total pins : 22
 Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
+Total memory bits : 5,545
+Embedded Multiplier 9-bit elements : 258
 Total PLLs : 0
 UFM blocks : 0
 ADC blocks : 0

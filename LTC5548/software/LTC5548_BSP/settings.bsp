@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Feb 21, 2021 3:04:24 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1613916264114</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Feb 21, 2021 9:46:11 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1613940371118</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\LTC5548\software\LTC5548_BSP</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\LTC5548\ltc5548_sys.sopcinfo</SopcDesignFile>

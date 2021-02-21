@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Sun Feb 21 14:56:41 2021
+Analysis & Synthesis Status : Successful - Sun Feb 21 21:48:34 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : LTC5548_TEST
 Top-level Entity Name : LTC5548_TEST
 Family : MAX 10
-Total logic elements : 2,784
-    Total combinational functions : 2,384
-    Dedicated logic registers : 1,389
-Total registers : 1389
+Total logic elements : 37,141
+    Total combinational functions : 28,430
+    Dedicated logic registers : 24,102
+Total registers : 24102
 Total pins : 83
 Total virtual pins : 0
-Total memory bits : 1,059,840
-Embedded Multiplier 9-bit elements : 0
+Total memory bits : 1,065,385
+Embedded Multiplier 9-bit elements : 258
 Total PLLs : 2
 UFM blocks : 0
 ADC blocks : 1

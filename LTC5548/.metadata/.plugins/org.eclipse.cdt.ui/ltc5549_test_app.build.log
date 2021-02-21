@@ -1,4 +1,4 @@
-20:18:57 **** Incremental Build of configuration Nios II for project ltc5549_test_app ****
+22:34:30 **** Incremental Build of configuration Nios II for project ltc5549_test_app ****
 wsl make all 
 Info: Building ../LTC5548_lib
 make --no-print-directory -C ../LTC5548_lib
@@ -29,5 +29,5 @@ Info: Creating ltc5549_test_app.objdump
 nios2-elf-objdump.exe --disassemble --syms --all-header ltc5549_test_app.elf >ltc5549_test_app.objdump
 [ltc5549_test_app build complete]
 
-20:19:04 Build Finished (took 7s.713ms)
+22:34:38 Build Finished (took 8s.7ms)
 

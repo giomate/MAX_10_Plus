@@ -1,8 +1,13 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace inst max_index_fft -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst max_index_fft.index_fft_0 -pg 1 -lvl 2 -y 70
+preplace inst max_index_fft.clk_0 -pg 1 -lvl 1 -y 30
+preplace netloc EXPORT<net_container>max_index_fft</net_container>(SLAVE)max_index_fft.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>max_index_fft</net_container>(MASTER)clk_0.clk_reset,(SLAVE)index_fft_0.reset) 1 1 1 330
+preplace netloc EXPORT<net_container>max_index_fft</net_container>(SLAVE)max_index_fft.index_fft_0_input,(SLAVE)index_fft_0.input) 1 0 2 NJ 100 NJ
+preplace netloc EXPORT<net_container>max_index_fft</net_container>(SLAVE)max_index_fft.index_fft_0_output,(SLAVE)index_fft_0.output) 1 0 2 NJ 120 NJ
+preplace netloc POINT_TO_POINT<net_container>max_index_fft</net_container>(SLAVE)index_fft_0.clock,(MASTER)clk_0.clk) 1 1 1 350
+preplace netloc EXPORT<net_container>max_index_fft</net_container>(SLAVE)max_index_fft.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+levelinfo -pg 1 0 120 480
+levelinfo -hier max_index_fft 130 160 380 470

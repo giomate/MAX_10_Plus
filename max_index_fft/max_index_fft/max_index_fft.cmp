@@ -1,9 +1,9 @@
 	component max_index_fft is
 		port (
-			clk_clk                              : in  std_logic                     := 'X';             -- clk
-			index_fft_0_index_out_max_index_byte : out std_logic_vector(7 downto 0);                     -- max_index_byte
-			index_fft_0_rx_input_rx_in           : in  std_logic_vector(11 downto 0) := (others => 'X'); -- rx_in
-			reset_reset_n                        : in  std_logic                     := 'X'              -- reset_n
+			clk_clk                  : in  std_logic                     := 'X';             -- clk
+			index_fft_0_input_uint12 : in  std_logic_vector(11 downto 0) := (others => 'X'); -- uint12
+			index_fft_0_output_uint8 : out std_logic_vector(7 downto 0);                     -- uint8
+			reset_reset_n            : in  std_logic                     := 'X'              -- reset_n
 		);
 	end component max_index_fft;
 

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'ltc5548_sys'
  * SOPC Builder design path: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/LTC5548/ltc5548_sys.sopcinfo
  *
- * Generated: Sun Feb 21 12:35:47 CET 2021
+ * Generated: Sun Feb 21 21:23:22 CET 2021
  */
 
 /*
@@ -296,7 +296,7 @@
 
 #define ALT_MODULE_CLASS_pio_2 altera_avalon_pio
 #define PIO_2_BASE 0x410e0
-#define PIO_2_BIT_CLEARING_EDGE_REGISTER 1
+#define PIO_2_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_2_CAPTURE 1
 #define PIO_2_DATA_WIDTH 8

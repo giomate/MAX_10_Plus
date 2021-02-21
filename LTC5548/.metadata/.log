@@ -3678,3 +3678,753 @@ return "/channels/remote24/(lib)/bytestream_1"
 
 !ENTRY com.altera.sbt4e.launch 1 0 2021-02-21 20:19:13.736
 !MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=NEEK10 on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto]
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:48.024
+!MESSAGE Connecting to System Console on port 55349
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:48.508
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:48.508
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:48.508
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:48.508
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:48.508
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:48.508
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:54.649
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:54.649
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:54.649
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:54.977
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:54.977
+!MESSAGE return "/channels/remote25/(lib)/processor_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:54.977
+!MESSAGE claim_service processor {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0} ""
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:54.977
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:54.977
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:54.977
+!MESSAGE processor_stop {/channels/remote25/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.117
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.117
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.117
+!MESSAGE processor_download_elf {/channels/remote25/(lib)/processor_1} {C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\LTC5548\software\ltc5549_test_app\ltc5549_test_app.elf}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.117
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.117
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.117
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.128
+!MESSAGE Connecting to System Console on port 55349
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.219
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.219
+!MESSAGE # First command must be: package require systemconsole <version>
+return "/channels/remote26/(lib)/bytestream_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.219
+!MESSAGE set bc [ claim_service bytestream {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0} "" ]
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.222
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.222
+!MESSAGE return "OK"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:55.222
+!MESSAGE enable_binary_protocol $bc
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:57.228
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:57.228
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:09:57.228
+!MESSAGE close_service processor {/channels/remote25/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.launch 1 0 2021-02-21 21:09:57.228
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=NEEK10 on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto]
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:49.244
+!MESSAGE Connecting to System Console on port 55994
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:49.509
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:49.509
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:49.509
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:49.525
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:49.525
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:49.525
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:55.666
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:55.666
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:55.666
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:55.994
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:55.994
+!MESSAGE return "/channels/remote1/(lib)/processor_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:55.994
+!MESSAGE claim_service processor {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0} ""
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.009
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.009
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.009
+!MESSAGE processor_stop {/channels/remote1/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.166
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.166
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.166
+!MESSAGE processor_download_elf {/channels/remote1/(lib)/processor_1} {C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\LTC5548\software\ltc5549_test_app\ltc5549_test_app.elf}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.172
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.172
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.172
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.174
+!MESSAGE Connecting to System Console on port 55994
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.216
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.216
+!MESSAGE # First command must be: package require systemconsole <version>
+return "/channels/remote2/(lib)/bytestream_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.216
+!MESSAGE set bc [ claim_service bytestream {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0} "" ]
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.222
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.222
+!MESSAGE return "OK"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:56.222
+!MESSAGE enable_binary_protocol $bc
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:58.224
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:58.224
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:24:58.224
+!MESSAGE close_service processor {/channels/remote1/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.launch 1 0 2021-02-21 21:24:58.224
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=NEEK10 on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto]
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:52.333
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:52.521
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:52.521
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:52.521
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:52.537
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:52.537
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:52.537
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:58.646
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:58.646
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:58.646
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:58.974
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:58.974
+!MESSAGE return "/channels/remote1/(lib)/processor_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:58.974
+!MESSAGE claim_service processor {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0} ""
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:58.990
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:58.990
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:58.990
+!MESSAGE processor_stop {/channels/remote1/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.162
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.162
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.162
+!MESSAGE processor_download_elf {/channels/remote1/(lib)/processor_1} {C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\LTC5548\software\ltc5549_test_app\ltc5549_test_app.elf}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.171
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.171
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.171
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.173
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.214
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.214
+!MESSAGE # First command must be: package require systemconsole <version>
+return "/channels/remote2/(lib)/bytestream_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.214
+!MESSAGE set bc [ claim_service bytestream {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0} "" ]
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.217
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.217
+!MESSAGE return "OK"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:55:59.217
+!MESSAGE enable_binary_protocol $bc
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:56:01.223
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:56:01.223
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 21:56:01.223
+!MESSAGE close_service processor {/channels/remote1/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.launch 1 0 2021-02-21 21:56:01.223
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=NEEK10 on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto]
+
+!ENTRY com.altera.sbt4e.launch 4 4 2021-02-21 22:05:41.612
+!MESSAGE Terminated launch with processor path: /devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:41.940
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:41.965
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:41.965
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:41.965
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:41.967
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:41.967
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:41.967
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.118
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.118
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.118
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.446
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.446
+!MESSAGE return "/channels/remote3/(lib)/processor_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.446
+!MESSAGE claim_service processor {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0} ""
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.446
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.446
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.446
+!MESSAGE processor_stop {/channels/remote3/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.602
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.602
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.602
+!MESSAGE processor_download_elf {/channels/remote3/(lib)/processor_1} {C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\LTC5548\software\ltc5549_test_app\ltc5549_test_app.elf}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.611
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.611
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.611
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.613
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.644
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.644
+!MESSAGE # First command must be: package require systemconsole <version>
+return "/channels/remote4/(lib)/bytestream_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.644
+!MESSAGE set bc [ claim_service bytestream {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0} "" ]
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.646
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.646
+!MESSAGE return "OK"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:48.646
+!MESSAGE enable_binary_protocol $bc
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:50.653
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:50.653
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:05:50.653
+!MESSAGE close_service processor {/channels/remote3/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.launch 1 0 2021-02-21 22:05:50.655
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=NEEK10 on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto]
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.960
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xd3d7620ab5db61d58ff9"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE return "TYPE_NAME nios2_oci.jtag VERSION 3 SLD_INSTANCE 0 SLD_ENCODED_ID 420496896 JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} JTAG_DEVICE_INDEX 1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:23.983
+!MESSAGE marker_node_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 4 4 2021-02-21 22:27:23.983
+!MESSAGE 
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:25.452
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:25.472
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:25.472
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:25.472
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:25.472
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:25.472
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:25.472
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:31.628
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:31.628
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:31.628
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:31.628
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:31.628
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xd3d7620ab5db61d58ff9"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:31.628
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:31.628
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:31.628
+!MESSAGE return "TYPE_NAME nios2_oci.jtag VERSION 3 SLD_INSTANCE 0 SLD_ENCODED_ID 420496896 JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} JTAG_DEVICE_INDEX 1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:31.628
+!MESSAGE marker_node_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:57.444
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:57.465
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:57.465
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:57.465
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:57.465
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:57.465
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:27:57.465
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:03.606
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:03.606
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:03.606
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:03.606
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:03.606
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xd3d7620ab5db61d58ff9"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:03.606
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:03.606
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:03.606
+!MESSAGE return "TYPE_NAME nios2_oci.jtag VERSION 3 SLD_INSTANCE 0 SLD_ENCODED_ID 420496896 JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} JTAG_DEVICE_INDEX 1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:03.606
+!MESSAGE marker_node_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 4 4 2021-02-21 22:28:03.606
+!MESSAGE 
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:16.712
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:16.727
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:16.727
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:16.727
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:16.727
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:16.727
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:16.727
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:22.915
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:22.915
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:22.915
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:22.931
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:22.931
+!MESSAGE return "/channels/remote8/(lib)/processor_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:22.931
+!MESSAGE claim_service processor {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0} ""
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:22.931
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:22.931
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:22.931
+!MESSAGE processor_stop {/channels/remote8/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.071
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.071
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.071
+!MESSAGE processor_download_elf {/channels/remote8/(lib)/processor_1} {C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\LTC5548\software\ltc5549_test_app\ltc5549_test_app.elf}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.087
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.087
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.087
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.087
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.125
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.125
+!MESSAGE # First command must be: package require systemconsole <version>
+return "/channels/remote9/(lib)/bytestream_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.125
+!MESSAGE set bc [ claim_service bytestream {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0} "" ]
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.128
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.128
+!MESSAGE return "OK"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:23.128
+!MESSAGE enable_binary_protocol $bc
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:25.138
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:25.138
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:25.138
+!MESSAGE processor_run {/channels/remote8/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:25.141
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:25.141
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:28:25.141
+!MESSAGE close_service processor {/channels/remote8/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:38.986
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:39.017
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:39.017
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:39.017
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:39.017
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:39.017
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:39.017
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.176
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.176
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.176
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.504
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.504
+!MESSAGE return "/channels/remote10/(lib)/processor_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.504
+!MESSAGE claim_service processor {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0} ""
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.504
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.504
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.504
+!MESSAGE processor_stop {/channels/remote10/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.645
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.645
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.645
+!MESSAGE processor_download_elf {/channels/remote10/(lib)/processor_1} {C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\LTC5548\software\ltc5549_test_app\ltc5549_test_app.elf}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.654
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.654
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.654
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.655
+!MESSAGE Connecting to System Console on port 56225
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.683
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.683
+!MESSAGE # First command must be: package require systemconsole <version>
+return "/channels/remote11/(lib)/bytestream_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.683
+!MESSAGE set bc [ claim_service bytestream {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0} "" ]
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.685
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.685
+!MESSAGE return "OK"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:45.685
+!MESSAGE enable_binary_protocol $bc
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:47.696
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:47.696
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-21 22:34:47.696
+!MESSAGE close_service processor {/channels/remote10/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.launch 1 0 2021-02-21 22:34:47.698
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=NEEK10 on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto]
