@@ -1,0 +1,26 @@
+/*
+ * LTC5548HANDLER.h
+ *
+ *  Created on: Feb 21, 2021
+ *      Author: giova
+ */
+
+#ifndef LTC5548HANDLER_H_
+#define LTC5548HANDLER_H_
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "lmx2694Handler.h"
+
+class LTC5548_HANDLER {
+private:
+	lmx2694_Handler  *lmx;
+	bool  enable;
+	uint8_t
+public:
+	LTC5548_HANDLER();
+	virtual ~LTC5548_HANDLER();
+	bool Init();
+};
+
+#endif /* LTC5548HANDLER_H_ */

@@ -3,7 +3,7 @@
 	<name>lmx2694_lib</name>
 	<comment></comment>
 	<projects>
-		<project>lmx2694_bsp</project>
+		<project>LTC5548_BSP</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

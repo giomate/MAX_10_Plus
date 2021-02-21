@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2021.02.19.20:41:52"
+ date="2021.02.20.10:57:45"
  outputDirectory="C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/Tone_Generator/tones_generator_sys/">
  <perimeter>
   <parameter
@@ -110,13 +110,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="tones_generator_sys:1.0:AUTO_DAC_TONES_GENERATOR_0_CLOCK_CLOCK_DOMAIN=-1,AUTO_DAC_TONES_GENERATOR_0_CLOCK_CLOCK_RATE=-1,AUTO_DAC_TONES_GENERATOR_0_CLOCK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C6GES,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1613763711,AUTO_UNIQUE_ID=(dac_tones_generator:1.0:)"
+   parameterizationKey="tones_generator_sys:1.0:AUTO_DAC_TONES_GENERATOR_0_CLOCK_CLOCK_DOMAIN=-1,AUTO_DAC_TONES_GENERATOR_0_CLOCK_CLOCK_RATE=-1,AUTO_DAC_TONES_GENERATOR_0_CLOCK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C6GES,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1613815064,AUTO_UNIQUE_ID=(dac_tones_generator:1.0:)"
    instancePathKey="tones_generator_sys"
    kind="tones_generator_sys"
    version="1.0"
    name="tones_generator_sys">
   <parameter name="AUTO_DAC_TONES_GENERATOR_0_CLOCK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1613763711" />
+  <parameter name="AUTO_GENERATION_ID" value="1613815064" />
   <parameter name="AUTO_DEVICE" value="10M50DAF484C6GES" />
   <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
   <parameter name="AUTO_UNIQUE_ID" value="" />

@@ -1,24 +1,27 @@
 obj/default/PLLLOCKEDCAPTURE.o: PLLLOCKEDCAPTURE.cpp PLLLOCKEDCAPTURE.h \
- ../lmx2694_bsp//HAL/inc/alt_types.h ../lmx2694_bsp/system.h \
- ../lmx2694_bsp/linker.h ../lmx2694_bsp//HAL/inc/sys/alt_irq.h \
- ../lmx2694_bsp//HAL/inc/nios2.h \
- ../lmx2694_bsp//drivers/inc/altera_avalon_pio_regs.h \
- ../lmx2694_bsp//HAL/inc/io.h ../lmx2694_bsp//HAL/inc/alt_types.h
+ ../../../LTC5548/software/LTC5548_BSP/HAL/inc/alt_types.h \
+ ../../../LTC5548/software/LTC5548_BSP/system.h \
+ ../../../LTC5548/software/LTC5548_BSP/linker.h \
+ ../../../LTC5548/software/LTC5548_BSP/HAL/inc/sys/alt_irq.h \
+ ../../../LTC5548/software/LTC5548_BSP/HAL/inc/nios2.h \
+ ../../../LTC5548/software/LTC5548_BSP/drivers/inc/altera_avalon_pio_regs.h \
+ ../../../LTC5548/software/LTC5548_BSP/HAL/inc/io.h \
+ ../../../LTC5548/software/LTC5548_BSP/HAL/inc/alt_types.h
 
 PLLLOCKEDCAPTURE.h:
 
-../lmx2694_bsp//HAL/inc/alt_types.h:
+../../../LTC5548/software/LTC5548_BSP/HAL/inc/alt_types.h:
 
-../lmx2694_bsp/system.h:
+../../../LTC5548/software/LTC5548_BSP/system.h:
 
-../lmx2694_bsp/linker.h:
+../../../LTC5548/software/LTC5548_BSP/linker.h:
 
-../lmx2694_bsp//HAL/inc/sys/alt_irq.h:
+../../../LTC5548/software/LTC5548_BSP/HAL/inc/sys/alt_irq.h:
 
-../lmx2694_bsp//HAL/inc/nios2.h:
+../../../LTC5548/software/LTC5548_BSP/HAL/inc/nios2.h:
 
-../lmx2694_bsp//drivers/inc/altera_avalon_pio_regs.h:
+../../../LTC5548/software/LTC5548_BSP/drivers/inc/altera_avalon_pio_regs.h:
 
-../lmx2694_bsp//HAL/inc/io.h:
+../../../LTC5548/software/LTC5548_BSP/HAL/inc/io.h:
 
-../lmx2694_bsp//HAL/inc/alt_types.h:
+../../../LTC5548/software/LTC5548_BSP/HAL/inc/alt_types.h:

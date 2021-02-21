@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Feb 19, 2021 8:53:06 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1613764386671</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Feb 20, 2021 11:22:06 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1613816526286</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\software\fft_test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\fft_test_sys.sopcinfo</SopcDesignFile>

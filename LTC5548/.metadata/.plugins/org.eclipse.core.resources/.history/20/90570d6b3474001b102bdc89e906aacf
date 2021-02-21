@@ -1,0 +1,33 @@
+/*
+ * LTC5548HANDLER.cpp
+ *
+ *  Created on: Feb 21, 2021
+ *      Author: giova
+ */
+
+#include "LTC5548HANDLER.h"
+static lmx2694_Handler local_lmx;
+
+LTC5548_HANDLER::LTC5548_HANDLER() {
+	// TODO Auto-generated constructor stub
+
+}
+
+LTC5548_HANDLER::~LTC5548_HANDLER() {
+	// TODO Auto-generated destructor stub
+}
+
+bool LTC5548_HANDLER::Init(void){
+	lmx=&local_lmx;
+	lmx->Init();
+	lmx->Set_Target_Frequency(3600.0);
+}
+bool LTC5548_HANDLER::Start_Mixer{
+	if(lmx.Got_locked()){
+
+	}
+}
+bool LTC5548_HANDLER::Set_Enable(bool st){
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_3_BASE);
+
+}

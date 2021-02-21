@@ -2653,3 +2653,640 @@ return "/channels/remote6/(lib)/bytestream_1"
 
 !ENTRY com.altera.sbt4e.launch 1 0 2021-02-19 20:57:50.660
 !MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=NEEK10 on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto]
+!SESSION 2021-02-20 11:20:26.426 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_232
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/20.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/20.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-02-20 11:21:10.576
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\giova'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-02-20 11:21:15.099
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.oomph.setup.ui 2 0 2021-02-20 11:21:23.074
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:352)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$3(SetupUIPlugin.java:346)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.osgi 2 0 2021-02-20 11:21:28.210
+!MESSAGE While loading class "com.altera.sbtgui.launch.Nios2PropertyTester", thread "Thread[main,6,main]" timed out waiting (5002ms) for thread "Thread[Worker-6,5,main]" to finish starting bundle "com.altera.sbtgui.launch_20.1.0.v20200606-1141 [483]". To avoid deadlock, thread "Thread[main,6,main]" is proceeding but "com.altera.sbtgui.launch.Nios2PropertyTester" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="com.altera.sbtgui.launch"; type="osgi.bundle"; version:Version="20.1.0.v20200606-1141"; singleton:="true" [id=483] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.expressions.PropertyTesterDescriptor.instantiate(PropertyTesterDescriptor.java:96)
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:97)
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130)
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130)
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130)
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130)
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:119)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:160)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.isApplicable(ContextualLaunchAction.java:287)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.fillMenu(ContextualLaunchAction.java:218)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction$1.menuShown(ContextualLaunchAction.java:141)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:788)
+	at org.eclipse.jface.action.ActionContributionItem.copyMenu(ActionContributionItem.java:1276)
+	at org.eclipse.jface.action.ActionContributionItem.handleShowProxy(ActionContributionItem.java:1256)
+	at org.eclipse.jface.action.ActionContributionItem.access$4(ActionContributionItem.java:1245)
+	at org.eclipse.jface.action.ActionContributionItem$8.handleEvent(ActionContributionItem.java:1218)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1118)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5037)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:262)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4221)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:16.051
+!MESSAGE Connecting to System Console on port 57164
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:16.392
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:16.392
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:16.392
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:22.562
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:22.562
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:22.562
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:22.565
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:22.565
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xad2d32fd3ef07663f5d1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:22.565
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:22.568
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:22.569
+!MESSAGE return "TYPE_NAME nios2_oci.jtag VERSION 3 SLD_INSTANCE 0 SLD_ENCODED_ID 420496896 JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} JTAG_DEVICE_INDEX 1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:22.569
+!MESSAGE marker_node_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:25.227
+!MESSAGE Connecting to System Console on port 57164
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:25.259
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:25.259
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:25.259
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:25.263
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:25.263
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:25.263
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:31.440
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:31.440
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:31.440
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:31.443
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:31.443
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xad2d32fd3ef07663f5d1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:31.443
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:31.445
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:31.445
+!MESSAGE return "TYPE_NAME nios2_oci.jtag VERSION 3 SLD_INSTANCE 0 SLD_ENCODED_ID 420496896 JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} JTAG_DEVICE_INDEX 1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:31.445
+!MESSAGE marker_node_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.363
+!MESSAGE Connecting to System Console on port 57164
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.398
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.399
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.399
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.402
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.402
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.402
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.404
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.404
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xad2d32fd3ef07663f5d1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.404
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.407
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.407
+!MESSAGE error "java.util.concurrent.ExecutionException: java.lang.Exception: marker_node_info: /devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0 is not an open marker service\n    invoked from within\n\"marker_node_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\"\n    invoked from within\n\"interp eval \$slave \{\nmarker_node_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\n\n\}\""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.407
+!MESSAGE marker_node_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.411
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.411
+!MESSAGE return "TYPE_NAME jtag_uart.jtag VERSION 1 SLD_INSTANCE 0 SLD_ENCODED_ID 201354752 JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} JTAG_DEVICE_INDEX 1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.411
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.413
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.413
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xad2d32fd3ef07663f5d1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.413
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.416
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.416
+!MESSAGE error "java.util.concurrent.ExecutionException: java.lang.Exception: marker_get_info: /devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0 is not an open marker service\n    invoked from within\n\"marker_get_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\"\n    invoked from within\n\"interp eval \$slave \{\nmarker_get_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\n\n\}\""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:34.416
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.467
+!MESSAGE Connecting to System Console on port 57164
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.497
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.497
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.497
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.499
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.499
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.499
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.502
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.502
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xad2d32fd3ef07663f5d1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.502
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.505
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.505
+!MESSAGE error "java.util.concurrent.ExecutionException: java.lang.Exception: marker_node_info: /devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0 is not an open marker service\n    invoked from within\n\"marker_node_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\"\n    invoked from within\n\"interp eval \$slave \{\nmarker_node_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\n\n\}\""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.505
+!MESSAGE marker_node_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.508
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.508
+!MESSAGE return "TYPE_NAME jtag_uart.jtag VERSION 1 SLD_INSTANCE 0 SLD_ENCODED_ID 201354752 JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} JTAG_DEVICE_INDEX 1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.508
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.510
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.510
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xad2d32fd3ef07663f5d1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.510
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.513
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.513
+!MESSAGE error "java.util.concurrent.ExecutionException: java.lang.Exception: marker_get_info: /devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0 is not an open marker service\n    invoked from within\n\"marker_get_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\"\n    invoked from within\n\"interp eval \$slave \{\nmarker_get_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\n\n\}\""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:38.513
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:39.383
+!MESSAGE Connecting to System Console on port 57164
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:39.410
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:39.410
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:39.410
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:39.414
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:39.414
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:39.414
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.570
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.570
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.570
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.572
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.572
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xad2d32fd3ef07663f5d1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.572
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.575
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.575
+!MESSAGE error "java.util.concurrent.ExecutionException: java.lang.Exception: marker_node_info: /devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0 is not an open marker service\n    invoked from within\n\"marker_node_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\"\n    invoked from within\n\"interp eval \$slave \{\nmarker_node_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\n\n\}\""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.575
+!MESSAGE marker_node_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.577
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.577
+!MESSAGE return "TYPE_NAME jtag_uart.jtag VERSION 1 SLD_INSTANCE 0 SLD_ENCODED_ID 201354752 JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} JTAG_DEVICE_INDEX 1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.577
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.579
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.579
+!MESSAGE return "JTAG_CABLE_NAME \{NEEK10 on localhost (USB-1)\} DEVICE_NAME 10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10 DESIGN_HASH 0xad2d32fd3ef07663f5d1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.579
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.582
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.582
+!MESSAGE error "java.util.concurrent.ExecutionException: java.lang.Exception: marker_get_info: /devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0 is not an open marker service\n    invoked from within\n\"marker_get_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\"\n    invoked from within\n\"interp eval \$slave \{\nmarker_get_info \{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}\n\n\}\""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:45.582
+!MESSAGE marker_get_info {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:59.860
+!MESSAGE Connecting to System Console on port 57164
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:59.884
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:59.884
+!MESSAGE return "20.1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:59.884
+!MESSAGE package require systemconsole 20.1
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:59.886
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:59.887
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:24:59.887
+!MESSAGE refresh_connections
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.046
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.046
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.046
+!MESSAGE get_service_paths processor
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.376
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.376
+!MESSAGE return "/channels/remote6/(lib)/processor_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.376
+!MESSAGE claim_service processor {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0} ""
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.383
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.383
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.383
+!MESSAGE processor_stop {/channels/remote6/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.593
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.593
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.593
+!MESSAGE processor_download_elf {/channels/remote6/(lib)/processor_1} {C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\software\fft_app\fft_app.elf}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.596
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.596
+!MESSAGE return "\{/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0\}"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.596
+!MESSAGE get_service_paths bytestream
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.644
+!MESSAGE Connecting to System Console on port 57164
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.686
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.687
+!MESSAGE # First command must be: package require systemconsole <version>
+return "/channels/remote7/(lib)/bytestream_1"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.687
+!MESSAGE set bc [ claim_service bytestream {/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(110:128 v1 #0)/jtaguart_0} "" ]
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.690
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.690
+!MESSAGE return "OK"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:06.690
+!MESSAGE enable_binary_protocol $bc
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:08.695
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:08.695
+!MESSAGE return ""
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2021-02-20 11:25:08.695
+!MESSAGE close_service processor {/channels/remote6/(lib)/processor_1}
+
+
+!ENTRY com.altera.sbt4e.launch 1 0 2021-02-20 11:25:08.700
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=NEEK10 on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto]
+
+!ENTRY org.eclipse.ui 4 4 2021-02-20 13:49:37.963
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at org.eclipse.jface.text.GapTextStore.allocate(GapTextStore.java:339)
+	at org.eclipse.jface.text.GapTextStore.reallocate(GapTextStore.java:290)
+	at org.eclipse.jface.text.GapTextStore.adjustGap(GapTextStore.java:223)
+	at org.eclipse.jface.text.GapTextStore.replace(GapTextStore.java:196)
+	at org.eclipse.jface.text.CopyOnWriteTextStore.replace(CopyOnWriteTextStore.java:158)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1184)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.ui.internal.console.ConsoleDocument.replace(ConsoleDocument.java:92)
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.processQueue(IOConsolePartitioner.java:582)
+	at org.eclipse.ui.internal.console.IOConsolePartitioner$QueueProcessingJob.runInUIThread(IOConsolePartitioner.java:532)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+!ENTRY org.eclipse.ui 4 4 2021-02-20 13:49:43.404
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at org.eclipse.jface.text.GapTextStore.allocate(GapTextStore.java:339)
+	at org.eclipse.jface.text.GapTextStore.reallocate(GapTextStore.java:290)
+	at org.eclipse.jface.text.GapTextStore.adjustGap(GapTextStore.java:223)
+	at org.eclipse.jface.text.GapTextStore.replace(GapTextStore.java:196)
+	at org.eclipse.jface.text.CopyOnWriteTextStore.replace(CopyOnWriteTextStore.java:158)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1184)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.ui.internal.console.ConsoleDocument.replace(ConsoleDocument.java:92)
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.processQueue(IOConsolePartitioner.java:582)
+	at org.eclipse.ui.internal.console.IOConsolePartitioner$QueueProcessingJob.runInUIThread(IOConsolePartitioner.java:532)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:330)
+	at org.eclipse.ui.internal.ide.dialogs.InternalErrorDialog.open(InternalErrorDialog.java:81)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchErrorHandler.openQuestionDialog(IDEWorkbenchErrorHandler.java:190)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchErrorHandler.handleException(IDEWorkbenchErrorHandler.java:145)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchErrorHandler.access$0(IDEWorkbenchErrorHandler.java:137)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchErrorHandler$1.runInUIThread(IDEWorkbenchErrorHandler.java:112)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+
+!ENTRY org.eclipse.ui 4 4 2021-02-20 13:49:46.161
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.ui 4 4 2021-02-20 13:49:48.675
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.ui 4 4 2021-02-20 13:49:52.325
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.ui 4 4 2021-02-20 13:49:54.088
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.ui 4 4 2021-02-20 13:49:55.432
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.ui 4 4 2021-02-20 13:50:01.166
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.ui 4 4 2021-02-20 13:50:01.167
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space

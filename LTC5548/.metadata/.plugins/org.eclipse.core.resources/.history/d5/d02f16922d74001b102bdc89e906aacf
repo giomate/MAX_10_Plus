@@ -1,0 +1,17 @@
+/*
+ * LTC5548HANDLER.h
+ *
+ *  Created on: Feb 21, 2021
+ *      Author: giova
+ */
+
+#ifndef LTC5548HANDLER_H_
+#define LTC5548HANDLER_H_
+
+class LTC5548_HANDLER {
+public:
+	LTC5548_HANDLER();
+	virtual ~LTC5548_HANDLER();
+};
+
+#endif /* LTC5548HANDLER_H_ */

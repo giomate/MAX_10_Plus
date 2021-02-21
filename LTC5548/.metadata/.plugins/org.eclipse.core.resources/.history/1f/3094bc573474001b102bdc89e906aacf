@@ -1,0 +1,22 @@
+/*
+ * LTC5548HANDLER.cpp
+ *
+ *  Created on: Feb 21, 2021
+ *      Author: giova
+ */
+
+#include "LTC5548HANDLER.h"
+static lmx2694_Handler local_lmx;
+
+LTC5548_HANDLER::LTC5548_HANDLER() {
+	// TODO Auto-generated constructor stub
+
+}
+
+LTC5548_HANDLER::~LTC5548_HANDLER() {
+	// TODO Auto-generated destructor stub
+}
+
+bool LTC5548_HANDLER::Init(void){
+	lmx=&local_lmx;
+}

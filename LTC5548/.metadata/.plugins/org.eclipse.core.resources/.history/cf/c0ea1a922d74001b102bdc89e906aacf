@@ -1,0 +1,18 @@
+/*
+ * LTC5548HANDLER.cpp
+ *
+ *  Created on: Feb 21, 2021
+ *      Author: giova
+ */
+
+#include "LTC5548HANDLER.h"
+
+LTC5548_HANDLER::LTC5548_HANDLER() {
+	// TODO Auto-generated constructor stub
+
+}
+
+LTC5548_HANDLER::~LTC5548_HANDLER() {
+	// TODO Auto-generated destructor stub
+}
+

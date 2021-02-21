@@ -1,0 +1,9 @@
+20:18:35 **** Incremental Build of configuration Nios II for project lmx2694_lib ****
+wsl make all 
+Info: Building ../../../LTC5548/software/LTC5548_BSP
+make --no-print-directory -C ../../../LTC5548/software/LTC5548_BSP
+[BSP build complete]
+cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
+
+20:18:36 Build Finished (took 1s.781ms)
+

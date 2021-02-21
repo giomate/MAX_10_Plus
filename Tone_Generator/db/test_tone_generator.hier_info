@@ -246,7 +246,7 @@ SW[1] => WAVE_SW[1].DATAIN
 SW[2] => WAVE_SW[2].DATAIN
 SW[3] => WAVE_SW[3].DATAIN
 SW[4] => WAVE_SW[4].DATAIN
-TR_CK <= TR_CK~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TR_CK <= <GND>
 
 
 |test_tone_generator|tones_generator_sys:dac16|tone_generator_qip:dac_tones_generator_0|DAC16:dac|raw_sine_wave:sine_wave
@@ -377,7 +377,7 @@ q[19] <= lpm_counter:LPM_COUNTER_component.q
 
 
 |test_tone_generator|counter:c20|lpm_counter:LPM_COUNTER_component
-clock => cntr_doi:auto_generated.clock
+clock => cntr_goi:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => ~NO_FANOUT~
 updown => ~NO_FANOUT~
@@ -410,26 +410,26 @@ data[17] => ~NO_FANOUT~
 data[18] => ~NO_FANOUT~
 data[19] => ~NO_FANOUT~
 cin => ~NO_FANOUT~
-q[0] <= cntr_doi:auto_generated.q[0]
-q[1] <= cntr_doi:auto_generated.q[1]
-q[2] <= cntr_doi:auto_generated.q[2]
-q[3] <= cntr_doi:auto_generated.q[3]
-q[4] <= cntr_doi:auto_generated.q[4]
-q[5] <= cntr_doi:auto_generated.q[5]
-q[6] <= cntr_doi:auto_generated.q[6]
-q[7] <= cntr_doi:auto_generated.q[7]
-q[8] <= cntr_doi:auto_generated.q[8]
-q[9] <= cntr_doi:auto_generated.q[9]
-q[10] <= cntr_doi:auto_generated.q[10]
-q[11] <= cntr_doi:auto_generated.q[11]
-q[12] <= cntr_doi:auto_generated.q[12]
-q[13] <= cntr_doi:auto_generated.q[13]
-q[14] <= cntr_doi:auto_generated.q[14]
-q[15] <= cntr_doi:auto_generated.q[15]
-q[16] <= cntr_doi:auto_generated.q[16]
-q[17] <= cntr_doi:auto_generated.q[17]
-q[18] <= cntr_doi:auto_generated.q[18]
-q[19] <= cntr_doi:auto_generated.q[19]
+q[0] <= cntr_goi:auto_generated.q[0]
+q[1] <= cntr_goi:auto_generated.q[1]
+q[2] <= cntr_goi:auto_generated.q[2]
+q[3] <= cntr_goi:auto_generated.q[3]
+q[4] <= cntr_goi:auto_generated.q[4]
+q[5] <= cntr_goi:auto_generated.q[5]
+q[6] <= cntr_goi:auto_generated.q[6]
+q[7] <= cntr_goi:auto_generated.q[7]
+q[8] <= cntr_goi:auto_generated.q[8]
+q[9] <= cntr_goi:auto_generated.q[9]
+q[10] <= cntr_goi:auto_generated.q[10]
+q[11] <= cntr_goi:auto_generated.q[11]
+q[12] <= cntr_goi:auto_generated.q[12]
+q[13] <= cntr_goi:auto_generated.q[13]
+q[14] <= cntr_goi:auto_generated.q[14]
+q[15] <= cntr_goi:auto_generated.q[15]
+q[16] <= cntr_goi:auto_generated.q[16]
+q[17] <= cntr_goi:auto_generated.q[17]
+q[18] <= cntr_goi:auto_generated.q[18]
+q[19] <= cntr_goi:auto_generated.q[19]
 cout <= <GND>
 eq[0] <= <GND>
 eq[1] <= <GND>
@@ -449,7 +449,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|test_tone_generator|counter:c20|lpm_counter:LPM_COUNTER_component|cntr_doi:auto_generated
+|test_tone_generator|counter:c20|lpm_counter:LPM_COUNTER_component|cntr_goi:auto_generated
 clock => counter_reg_bit[19].CLK
 clock => counter_reg_bit[18].CLK
 clock => counter_reg_bit[17].CLK
@@ -492,7 +492,7 @@ q[18] <= counter_reg_bit[18].DB_MAX_OUTPUT_PORT_TYPE
 q[19] <= counter_reg_bit[19].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|test_tone_generator|counter:c20|lpm_counter:LPM_COUNTER_component|cntr_doi:auto_generated|cmpr_usb:cmpr1
+|test_tone_generator|counter:c20|lpm_counter:LPM_COUNTER_component|cntr_goi:auto_generated|cmpr_usb:cmpr1
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[3].IN0
 dataa[1] => data_wire[3].IN0

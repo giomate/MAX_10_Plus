@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Feb 19 20:42:55 2021
+Analysis & Synthesis Status : Successful - Sat Feb 20 11:00:45 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : test_tone_generator
 Top-level Entity Name : test_tone_generator
 Family : MAX 10
-Total logic elements : 312
-    Total combinational functions : 305
-    Dedicated logic registers : 94
-Total registers : 94
+Total logic elements : 310
+    Total combinational functions : 289
+    Dedicated logic registers : 84
+Total registers : 84
 Total pins : 71
 Total virtual pins : 0
 Total memory bits : 0

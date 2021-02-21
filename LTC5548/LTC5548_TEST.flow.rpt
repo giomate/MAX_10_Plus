@@ -1,0 +1,139 @@
+Flow report for LTC5548_TEST
+Sun Feb 21 14:57:53 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Sun Feb 21 14:57:43 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; LTC5548_TEST                                ;
+; Top-level Entity Name              ; LTC5548_TEST                                ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C6GES                            ;
+; Timing Models                      ; Preliminary                                 ;
+; Total logic elements               ; 2,592 / 49,760 ( 5 % )                      ;
+;     Total combinational functions  ; 2,390 / 49,760 ( 5 % )                      ;
+;     Dedicated logic registers      ; 1,381 / 49,760 ( 3 % )                      ;
+; Total registers                    ; 1381                                        ;
+; Total pins                         ; 83 / 360 ( 23 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,059,840 / 1,677,312 ( 63 % )              ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 1 / 2 ( 50 % )                              ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 02/21/2021 14:55:01 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; LTC5548_TEST        ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                               ;
++-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 220837864969264.161391570103768                               ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ltc5548_sys/synthesis/../ltc5548_sys.cmp                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ltc5548_sys/synthesis/../../ltc5548_sys.qsys                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; pll100_inst.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; pll100_bb.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; pll100.ppf                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; counter100MHz_inst.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; counter100MHz_bb.v                                            ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                        ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                        ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                        ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                           ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                         ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; software/ltc5549_test_app/mem_init/                           ; --            ; --          ; --         ;
+; SLD_FILE                            ; ltc5548_sys/synthesis/ltc5548_sys.regmap                      ; --            ; --          ; --         ;
+; SLD_FILE                            ; ltc5548_sys/synthesis/ltc5548_sys.debuginfo                   ; --            ; --          ; --         ;
+; SLD_INFO                            ; QSYS_NAME ltc5548_sys HAS_SOPCINFO 1 GENERATION_ID 1613907282 ; --            ; ltc5548_sys ; --         ;
+; SOPCINFO_FILE                       ; ltc5548_sys/synthesis/../../ltc5548_sys.sopcinfo              ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --          ; --         ;
++-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:31     ; 1.0                     ; 5241 MB             ; 00:01:44                           ;
+; Fitter               ; 00:00:42     ; 1.4                     ; 6005 MB             ; 00:01:13                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4721 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:08     ; 2.3                     ; 4921 MB             ; 00:00:14                           ;
+; Total                ; 00:02:26     ; --                      ; --                  ; 00:03:16                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-F6HDU1B  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-F6HDU1B  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-F6HDU1B  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-F6HDU1B  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off LTC5548_TEST -c LTC5548_TEST
+quartus_fit --read_settings_files=off --write_settings_files=off LTC5548_TEST -c LTC5548_TEST
+quartus_asm --read_settings_files=off --write_settings_files=off LTC5548_TEST -c LTC5548_TEST
+quartus_sta LTC5548_TEST -c LTC5548_TEST
+
+
+

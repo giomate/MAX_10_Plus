@@ -7,7 +7,7 @@
 <stringAttribute key="bytestreamprocessorInstanceId" value="0"/>
 <booleanAttribute key="checkSysid" value="false"/>
 <booleanAttribute key="checkTimestamp" value="false"/>
-<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="49552"/>
+<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="57211"/>
 <booleanAttribute key="connectToConsole" value="true"/>
 <booleanAttribute key="downloadElf" value="true"/>
 <stringAttribute key="elfFile" value="fft_app.elf"/>
@@ -31,7 +31,6 @@
 <stringAttribute key="processorInstanceId" value="0"/>
 <stringAttribute key="processorPath" value="/devices/10M50DA(.|ES)|10M50DC@1#USB-1#NEEK10/(link)/JTAG/(70:34 v3 #0)/nios2_0"/>
 <stringAttribute key="project" value="fft_app"/>
-<stringAttribute key="quartusProjectDir" value=""/>
 <booleanAttribute key="resetProcessor" value="false"/>
 <booleanAttribute key="startProcessor" value="true"/>
 <stringAttribute key="sysidBaseAddress" value=""/>

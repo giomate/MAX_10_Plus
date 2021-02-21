@@ -19,15 +19,15 @@
 #
 # Quartus Prime
 # Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-# Date created = 20:42:04  February 19, 2021
+# Date created = 10:57:54  February 20, 2021
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "20.1"
-DATE = "20:42:04  February 19, 2021"
+DATE = "10:57:54  February 20, 2021"
 
 # Revisions
 
 PROJECT_REVISION = "test_tone_generator"
-PROJECT_REVISION = "tone_generator_qip"
 PROJECT_REVISION = "Tone_Generator"
+PROJECT_REVISION = "tone_generator_qip"

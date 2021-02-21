@@ -93,14 +93,14 @@ LIB_ASFLAGS_USER :=
 LIB_ARCHIVER_FLAGS := -src
 
 # List of library specific include directories
-LIB_INCLUDE_DIRS :=
+LIB_INCLUDE_DIRS := ./
 
 # Pre- and post- processor settings.
 BUILD_PRE_PROCESS :=
 BUILD_POST_PROCESS :=
 
 # Define path to the root of the BSP.
-BSP_ROOT_DIR := ../lmx2694_bsp/
+BSP_ROOT_DIR := ../../../LTC5548/software/LTC5548_BSP
 
 # List of public include directories for -I compiler option (-I added when used).
 

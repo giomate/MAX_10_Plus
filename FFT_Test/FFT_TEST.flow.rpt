@@ -1,5 +1,5 @@
 Flow report for FFT_TEST
-Fri Feb 19 20:55:20 2021
+Sat Feb 20 11:13:14 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Feb 19 20:55:10 2021       ;
+; Flow Status                        ; Successful - Sat Feb 20 11:12:53 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; FFT_TEST                                    ;
 ; Top-level Entity Name              ; FFT_TEST                                    ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 2,362 / 49,760 ( 5 % )                      ;
-;     Total combinational functions  ; 2,181 / 49,760 ( 4 % )                      ;
-;     Dedicated logic registers      ; 1,203 / 49,760 ( 2 % )                      ;
-; Total registers                    ; 1203                                        ;
+; Total logic elements               ; 2,342 / 49,760 ( 5 % )                      ;
+;     Total combinational functions  ; 2,173 / 49,760 ( 4 % )                      ;
+;     Dedicated logic registers      ; 1,193 / 49,760 ( 2 % )                      ;
+; Total registers                    ; 1193                                        ;
 ; Total pins                         ; 83 / 360 ( 23 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,059,840 / 1,677,312 ( 63 % )              ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/19/2021 20:52:50 ;
+; Start date & time ; 02/20/2021 11:08:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FFT_TEST            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
 ; Assignment Name                     ; Value                                                          ; Default Value ; Entity Name  ; Section Id ;
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 220837864969264.161376437005860                                ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID               ; 220837864969264.161381568801596                                ; --            ; --           ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                             ; --            ; --           ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                              ; --            ; --           ; --         ;
 ; MISC_FILE                           ; ../LMX2694/counter_bb.v                                        ; --            ; --           ; --         ;
@@ -96,7 +96,7 @@ https://fpgasoftware.intel.com/eula.
 ; SEARCH_PATH                         ; software/fft_app/mem_init/                                     ; --            ; --           ; --         ;
 ; SLD_FILE                            ; fft_test_sys/synthesis/fft_test_sys.regmap                     ; --            ; --           ; --         ;
 ; SLD_FILE                            ; fft_test_sys/synthesis/fft_test_sys.debuginfo                  ; --            ; --           ; --         ;
-; SLD_INFO                            ; QSYS_NAME fft_test_sys HAS_SOPCINFO 1 GENERATION_ID 1613764320 ; --            ; fft_test_sys ; --         ;
+; SLD_INFO                            ; QSYS_NAME fft_test_sys HAS_SOPCINFO 1 GENERATION_ID 1613815485 ; --            ; fft_test_sys ; --         ;
 ; SOPCINFO_FILE                       ; fft_test_sys/synthesis/../../fft_test_sys.sopcinfo             ; --            ; --           ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                             ; --            ; --           ; --         ;
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
@@ -107,11 +107,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:28     ; 1.0                     ; 5221 MB             ; 00:01:46                           ;
-; Fitter               ; 00:00:34     ; 1.5                     ; 6000 MB             ; 00:01:11                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4716 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:08     ; 2.2                     ; 4922 MB             ; 00:00:13                           ;
-; Total                ; 00:02:15     ; --                      ; --                  ; 00:03:14                           ;
+; Analysis & Synthesis ; 00:02:33     ; 1.0                     ; 5210 MB             ; 00:01:48                           ;
+; Fitter               ; 00:01:19     ; 1.2                     ; 6000 MB             ; 00:01:14                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4718 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:17     ; 1.5                     ; 4918 MB             ; 00:00:13                           ;
+; Total                ; 00:04:15     ; --                      ; --                  ; 00:03:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
