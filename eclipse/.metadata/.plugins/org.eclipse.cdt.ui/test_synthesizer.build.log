@@ -1,5 +1,6 @@
-20:40:18 **** Incremental Build of configuration Nios II for project test_synthesizer ****
+18:54:56 **** Incremental Build of configuration Nios II for project test_synthesizer ****
 wsl make all 
+make: Warning: File '../../../LMX2694/software/lmx2694_bsp/public.mk' has modification time 3464 s in the future
 Info: Building ../adf5610
 make --no-print-directory -C ../adf5610
 Info: Building ../Synthesizer_bsp/
@@ -8,13 +9,19 @@ make --no-print-directory -C ../Synthesizer_bsp/
 cp -f obj/default/libadf5610.a libadf5610.a
 Info: Building ../../../LMX2694/software/lmx2694_lib
 make --no-print-directory -C ../../../LMX2694/software/lmx2694_lib
+make[1]: Warning: File 'obj/default/lmx2694Handler.d' has modification time 3589 s in the future
 Info: Building ../lmx2694_bsp/
 make --no-print-directory -C ../lmx2694_bsp/
+make[2]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3534 s in the future
 [BSP build complete]
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
 cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
 Info: Building ../../../LMX2694/software/lmx2694_bsp
 make --no-print-directory -C ../../../LMX2694/software/lmx2694_bsp
+make[1]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3532 s in the future
 [BSP build complete]
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
 Info: Linking test_synthesizer.elf
 nios2-elf-g++.exe  -T'../../../LMX2694/software/lmx2694_bsp/linker.x' -msys-crt0='../../../LMX2694/software/lmx2694_bsp/obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib -L../../../LMX2694/software/lmx2694_bsp -L../adf5610 -L../../../LMX2694/software/lmx2694_lib   -Wl,-Map=test_synthesizer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test_synthesizer.elf obj/default/main.o -ladf5610 -llmx2694_lib -lm -ladf5610 -llmx2694_lib -msys-lib=m
 nios2-elf-insert.exe test_synthesizer.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_cpu
@@ -22,6 +29,7 @@ Unable to determine program-size.
 Info: Creating test_synthesizer.objdump
 nios2-elf-objdump.exe --disassemble --syms --all-header test_synthesizer.elf >test_synthesizer.objdump
 [test_synthesizer build complete]
+make: warning:  Clock skew detected.  Your build may be incomplete.
 
-20:40:24 Build Finished (took 6s.452ms)
+18:55:02 Build Finished (took 6s.226ms)
 

@@ -1,0 +1,6 @@
+11:47:58 **** Clean-only build of configuration Nios II for project fft_lib ****
+wsl make clean 
+[fft_lib clean complete]
+
+11:47:58 Build Finished (took 284ms)
+

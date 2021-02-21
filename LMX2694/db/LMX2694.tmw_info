@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 start_full_compilation:s
 start_assembler:s-start_full_compilation
 start_timing_analyzer:s-start_full_compilation
+=======
+start_full_compilation:s:00:01:45
+start_analysis_synthesis:s:00:00:53-start_full_compilation
+start_analysis_elaboration:s-start_full_compilation
+start_fitter:s:00:00:37-start_full_compilation
+start_assembler:s:00:00:07-start_full_compilation
+start_timing_analyzer:s:00:00:08-start_full_compilation
+>>>>>>> 45cfaff56c6c2626847b0eb3391450f6347573c9

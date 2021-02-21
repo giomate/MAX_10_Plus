@@ -1,0 +1,25 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Feb 19, 2021
+ *      Author: giova
+ */
+
+#include "main.h"
+
+ FFT_HANDLER  searcher;
+
+int main(){
+	FFT_HANDLER  searcher;
+	uint8_t  max_index;
+	searcher.Init();
+	while(1){
+		max_index=searcher.Read_Index();
+	}
+	 return 0;
+}
+
+
+
+
+

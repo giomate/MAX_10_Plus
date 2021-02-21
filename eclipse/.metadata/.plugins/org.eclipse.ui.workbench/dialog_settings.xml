@@ -28,6 +28,8 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\ADF5610\software\test_synthesizer"/>
+			<item value="C:\Salukat\Purificador\SoftwareDevelopment\Atmel_Microchip\LMX_lib\LMX_lib"/>
 			<item value="C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\M10P_v.1.0.0_SystemCD\Demonstrations\my_first_niosii\software\my_first_niosii"/>
 			<item value="C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\M10P_v.1.0.0_SystemCD\Demonstrations\power_monitor_nios\software\nios_app"/>
 			<item value="C:\Salukat\Purificador\SoftwareDevelopment\BladeRF\hdl\quartus\work\bladerf-micro-A4-hosted\software\Synthesizer"/>

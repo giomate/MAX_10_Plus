@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_cpu'
  * SOPC Builder design path: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/LMX2694/nios_cpu.sopcinfo
  *
- * Generated: Sun Feb 07 13:23:58 CET 2021
+ * Generated: Sun Feb 14 17:56:28 CET 2021
  */
 
 /*
@@ -51,7 +51,9 @@
 MEMORY
 {
     reset : ORIGIN = 0x20000, LENGTH = 32
-    onchip_memory2_0 : ORIGIN = 0x20020, LENGTH = 131040
+    onchip_memory2_0 : ORIGIN = 0x20020, LENGTH = 128992
+    interrupt_stack : ORIGIN = 0x3f800, LENGTH = 1024
+    exception_stack : ORIGIN = 0x3fc00, LENGTH = 1024
 }
 
 /* Define symbols for each memory base-address */
@@ -367,7 +369,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x40000;
+__alt_data_end = 0x3f800;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -377,10 +379,22 @@ PROVIDE( __alt_stack_pointer = __alt_data_end );
 PROVIDE( __alt_stack_limit   = __alt_stack_base );
 
 /*
+ * These symbols define the location of the separate exception stack.
+ */
+PROVIDE( __alt_exception_stack_pointer = 0x40000 );
+PROVIDE( __alt_exception_stack_limit   = 0x3fc00 );
+
+/*
+ * These symbols define the location of the separate interrupt stack.
+ */
+PROVIDE( __alt_interrupt_stack_pointer = 0x3fc00 );
+PROVIDE( __alt_interrupt_stack_limit   = 0x3f800 );
+
+/*
  * This symbol controls where the start of the heap is.  If the stack is
  * contiguous with the heap then the stack will contract as memory is
  * allocated to the heap.
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x40000 );
+PROVIDE( __alt_heap_limit    = 0x3f800 );

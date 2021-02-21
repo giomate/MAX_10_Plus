@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\adc_converter_IN2.qsys --block-symbol-file --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\adc_converter_IN2 --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading FFT_Test/adc_converter_IN2.qsys
+Progress: Reading input file
+Progress: Adding adc_in2_ch0_converter_0 [adc_in2_ch0_converter 1.0]
+Progress: Parameterizing module adc_in2_ch0_converter_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\adc_converter_IN2.qsys --synthesis=VERILOG --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\FFT_Test\adc_converter_IN2\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading FFT_Test/adc_converter_IN2.qsys
+Progress: Reading input file
+Progress: Adding adc_in2_ch0_converter_0 [adc_in2_ch0_converter 1.0]
+Progress: Parameterizing module adc_in2_ch0_converter_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: adc_converter_IN2: Generating adc_converter_IN2 "adc_converter_IN2" for QUARTUS_SYNTH
+Info: adc_in2_ch0_converter_0: "adc_converter_IN2" instantiated adc_in2_ch0_converter "adc_in2_ch0_converter_0"
+Info: adc_converter_IN2: Done "adc_converter_IN2" with 2 modules, 6 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

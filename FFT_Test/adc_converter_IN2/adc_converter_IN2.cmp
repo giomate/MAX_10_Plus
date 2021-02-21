@@ -1,0 +1,8 @@
+	component adc_converter_IN2 is
+		port (
+			adc_data : out std_logic_vector(11 downto 0);        -- rx_in
+			clk      : in  std_logic                     := 'X'; -- clk
+			reset_n  : in  std_logic                     := 'X'  -- reset_n
+		);
+	end component adc_converter_IN2;
+

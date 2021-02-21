@@ -1,0 +1,33 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\max_index_fft\max_index_fft.qsys --block-symbol-file --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\max_index_fft\max_index_fft --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading max_index_fft/max_index_fft.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding index_fft_0 [index_fft 1.0]
+Progress: Parameterizing module index_fft_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\max_index_fft\max_index_fft.qsys --synthesis=VERILOG --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\max_index_fft\max_index_fft\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading max_index_fft/max_index_fft.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding index_fft_0 [index_fft 1.0]
+Progress: Parameterizing module index_fft_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: max_index_fft: Generating max_index_fft "max_index_fft" for QUARTUS_SYNTH
+Info: index_fft_0: "max_index_fft" instantiated index_fft "index_fft_0"
+Info: rst_controller: "max_index_fft" instantiated altera_reset_controller "rst_controller"
+Info: max_index_fft: Done "max_index_fft" with 3 modules, 502 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

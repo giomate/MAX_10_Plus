@@ -1,0 +1,102 @@
+module  DAC16  (
+ input         RESET_N , 
+ input         CLK_50 , 
+ output [15:0] DATA16 ,  //to DAC data  
+ output reg    SYNC ,
+ output reg    SCLK,
+ output reg    DIN ,
+ 
+ input    [2:0]   SW ,
+ output   reg     TR_CK,  
+ 
+ //--test
+ output reg        SYS_CLK  ,  
+ output reg [7:0]  ST  ,
+ output reg [7:0]  CNT ,
+ output reg  [23:0]RDATA 
+ 
+ );
+ 
+ //-- 25MHZ --
+ //always @( posedge CLK_50 )   SYS_CLK <=~SYS_CLK ; 
+
+
+ //--FSM--
+ always @( negedge RESET_N or posedge CLK_50  )begin
+ if ( !RESET_N) begin 
+   ST<=0;
+	SYNC  <=1; 
+	SCLK  <=0;  
+	DIN   <=0 ;  	 
+	CNT   <=0; 
+	TR_CK <=0;
+  end
+ else begin 
+  case (ST)
+  0: begin 
+     { DIN , RDATA[23:0] }   <= {  9'h0, DATA16[15:0]  } ;
+	  	CNT   <=0; 
+       ST<=1 ;  
+  end
+  1: begin 
+       SCLK  <=0;
+     { DIN , RDATA[23:0] }   <= { RDATA[23:0] ,1'b0 } ;	 
+	    SYNC  <=0; 
+	    ST<= 2; 
+  end
+  2:begin 
+	     CNT <= CNT +1; 
+		  ST<= 3; 
+		  SCLK  <=1; 
+   end
+  3: begin 
+        SCLK  <=0;	  
+	  if  ( CNT==24) begin 
+	       ST<=4  ;  	
+		    TR_CK <=1;	 
+		end 
+	   else  ST<=1 ;  
+  end
+  4: begin 
+      ST<=0 ;  	
+	   SYNC  <=1; 
+	   TR_CK <=0;
+	   DIN   <=0 ;
+  end  
+  endcase 
+  end
+ end
+ 
+
+//-----QUARE-WAVE SOURCE //
+reg   [31:0] WAVE ;
+wire  [31:0] WAVE_SW ;
+reg   H_L ; 
+
+wire [31:0] BASE ;
+
+assign BASE = 256 ;
+ 
+assign WAVE_SW = (
+             ( SW ==0 ) ?BASE  : ( 
+             ( SW ==1 ) ?BASE/2  : ( 
+             ( SW ==2 ) ?BASE/4  : ( 
+             ( SW ==3 ) ?BASE/8  : ( 
+             ( SW ==4 ) ?BASE/16  : ( 
+             ( SW ==5 ) ?BASE/32  : ( 
+             ( SW ==6 ) ?BASE/64  : ( 
+             ( SW ==7 ) ?BASE/128  :  BASE/128
+				 ))))))));
+				 
+//--change--
+always @( posedge TR_CK ) begin 
+ if ( WAVE >  WAVE_SW/2 ) begin 
+      H_L <= ~H_L;     
+		WAVE <= 0; 
+ end
+ else  WAVE <=  WAVE +1 ; 
+ end
+//---
+assign DATA16 = ( H_L)?16'hffff:0 ; 
+ 
+endmodule

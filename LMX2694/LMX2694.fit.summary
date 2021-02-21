@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sun Feb 07 20:34:51 2021
+Fitter Status : Successful - Sun Feb 14 20:52:58 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : LMX2694
 Top-level Entity Name : LMX2694
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 2,093 / 49,760 ( 4 % )
-    Total combinational functions : 1,915 / 49,760 ( 4 % )
-    Dedicated logic registers : 1,198 / 49,760 ( 2 % )
-Total registers : 1198
+Total logic elements : 2,166 / 49,760 ( 4 % )
+    Total combinational functions : 1,987 / 49,760 ( 4 % )
+    Dedicated logic registers : 1,229 / 49,760 ( 2 % )
+Total registers : 1229
 Total pins : 108 / 360 ( 30 % )
 Total virtual pins : 0
 Total memory bits : 1,059,840 / 1,677,312 ( 63 % )

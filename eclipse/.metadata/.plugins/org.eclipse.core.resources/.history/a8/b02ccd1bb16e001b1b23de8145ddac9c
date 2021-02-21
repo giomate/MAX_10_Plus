@@ -1,0 +1,126 @@
+/*
+ * PLLLOCKEDCAPTURE.cpp
+ *
+ *  Created on: Feb 14, 2021
+ *      Author: giova
+ */
+
+#include "PLLLOCKEDCAPTURE.h"
+
+#include <stdio.h>
+#include <unistd.h>
+#include "system.h"
+#include "sys/alt_irq.h"
+#include "altera_avalon_pio_regs.h"
+
+volatile uint8_t edge_capture;
+
+PLL_LOCKED_CAPTURE::PLL_LOCKED_CAPTURE() {
+	// TODO Auto-generated constructor stub
+	base_address=PIO_0_BASE;
+}
+
+PLL_LOCKED_CAPTURE::~PLL_LOCKED_CAPTURE() {
+	// TODO Auto-generated destructor stub
+}
+
+#ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
+static void handle_pll_interrupts(void* context)
+#else
+static void handle_button_interrupts(void* context, alt_u32 id)
+#endif
+{
+  /* Cast context to edge_capture's type.
+   * It is important to keep this volatile,
+   * to avoid compiler optimization issues.
+   */
+  volatile uint8_t* edge_capture_ptr = (volatile uint8_t*) context;
+  /* Store the value in the Button's edge capture register in *context. */
+  *edge_capture_ptr = IORD_ALTERA_AVALON_PIO_EDGE_CAP(PIO_0_BASE);
+  /* Reset the Button's edge capture register. */
+  IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_0_BASE, 0);
+
+  /*
+   * Read the PIO to delay ISR exit. This is done to prevent a spurious
+   * interrupt in systems with high processor -> pio latency and fast
+   * interrupts.
+   */
+  IORD_ALTERA_AVALON_PIO_EDGE_CAP(PIO_0_BASE);
+}
+
+static void init_pll_pio(void)
+{
+  /* Recast the edge_capture pointer to match the alt_irq_register() function
+  * prototype. */
+  void* edge_capture_ptr = (void*) &edge_capture;
+  /* Enable all 4 button interrupts. */
+  IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_0_BASE, 0x1);
+  /* Reset the edge capture register. */
+  IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_0_BASE, 0x0);
+
+  /*
+   * Register the interrupt handler.
+   * Provision is made here for systems that might have either the
+   * legacy or enhanced interrupt API active, or for the Nios II IDE
+   * which does not support enhanced interrupts. For systems created using
+   * the Nios II softawre build tools, the enhanced API is recommended
+   * for new designs.
+   */
+#ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
+  alt_ic_isr_register(PIO_0_IRQ_INTERRUPT_CONTROLLER_ID, PIO_0_IRQ,
+    handle_pll_interrupts, edge_capture_ptr, 0x0);
+#else
+  alt_irq_register( BUTTON_PIO_IRQ, edge_capture_ptr,
+    handle_button_interrupts);
+#endif
+}
+static void disable_pll_pio(void)
+{
+  /* Disable interrupts from the button_pio PIO component. */
+  IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_0_BASE, 0x0);
+  /* Un-register the IRQ handler by passing a null handler. */
+#ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
+  alt_ic_isr_register(PIO_0_IRQ_INTERRUPT_CONTROLLER_ID, PIO_0_IRQ,
+    NULL, NULL, NULL);
+#else
+  alt_irq_register( BUTTON_PIO_IRQ, NULL, NULL );
+#endif
+}
+bool PLL_LOCKED_CAPTURE::IsLocked(void){
+	if(pll_locked){
+		pll_locked=((IORD_ALTERA_AVALON_PIO_DATA(base_address))&(0x01))>0;
+		if(pll_locked){
+				is_locked=pll_locked;
+				disable_pll_pio();
+			}else{
+				init_pll_pio();
+				watching=true;
+				last_locked=0xff;
+			}
+
+	}else{
+		Capture_Interrupt();
+	}
+
+
+
+	return is_locked;
+}
+
+bool PLL_LOCKED_CAPTURE::Capture_Interrupt(){
+	if(last_locked==edge_capture){
+
+	}else{
+		last_locked=edge_capture;
+		is_locked=(edge_capture&0x01)>0;
+			if (is_locked)
+			{
+				disable_pll_pio();
+			}
+			else
+			{
+
+
+			}
+	}
+}

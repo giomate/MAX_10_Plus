@@ -1,0 +1,23 @@
+/*
+ * FFTHANDLER.cpp
+ *
+ *  Created on: Feb 19, 2021
+ *      Author: giova
+ */
+
+#include "FFTHANDLER.h"
+
+FFT_HANDLER::FFT_HANDLER() {
+	// TODO Auto-generated constructor stub
+
+}
+
+FFT_HANDLER::~FFT_HANDLER() {
+	// TODO Auto-generated destructor stub
+}
+
+bool FFT_HANDLER::Init(){
+	base_address=PIO_0_BASE;
+}
+
+uint8_t

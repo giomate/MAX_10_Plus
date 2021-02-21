@@ -1,9 +1,13 @@
-20:40:16 **** Incremental Build of configuration Nios II for project lmx2694_lib ****
+20:58:53 **** Incremental Build of configuration Nios II for project lmx2694_lib ****
 wsl make all 
+make: Warning: File 'obj/default/lmx2694Handler.d' has modification time 3362 s in the future
 Info: Building ../lmx2694_bsp/
 make --no-print-directory -C ../lmx2694_bsp/
+make[1]: Warning: File 'obj/drivers/src/altera_avalon_timer_vars.d' has modification time 3358 s in the future
 [BSP build complete]
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
 cp -f obj/default/liblmx2694_lib.a liblmx2694_lib.a
+make: warning:  Clock skew detected.  Your build may be incomplete.
 
-20:40:18 Build Finished (took 1s.601ms)
+20:58:55 Build Finished (took 1s.896ms)
 

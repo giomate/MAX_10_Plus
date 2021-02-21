@@ -1,0 +1,37 @@
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_TOOL_VERSION "20.1"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "adc_converter_IN2" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../adc_converter_IN2.sopcinfo"]
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name SLD_INFO "QSYS_NAME adc_converter_IN2 HAS_SOPCINFO 1 GENERATION_ID 1613722325"
+set_global_assignment -library "adc_converter_IN2" -name MISC_FILE [file join $::quartus(qip_path) "../adc_converter_IN2.cmp"]
+set_global_assignment -library "adc_converter_IN2" -name SLD_FILE [file join $::quartus(qip_path) "adc_converter_IN2.debuginfo"]
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_TARGETED_DEVICE_FAMILY "MAX 10"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_GENERATED_DEVICE_FAMILY "{MAX 10}"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "adc_converter_IN2" -name MISC_FILE [file join $::quartus(qip_path) "../../adc_converter_IN2.qsys"]
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_NAME "YWRjX2NvbnZlcnRlcl9JTjI="
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_DISPLAY_NAME "YWRjX2NvbnZlcnRlcl9JTjI="
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYxMzcyMjMyNQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::TUFYIDEw::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBNNTBEQUY0ODRDNkdFUw==::QXV0byBERVZJQ0U="
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19DTE9DS19SQVRF::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19DTE9DS19ET01BSU4=::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "adc_converter_IN2" -library "adc_converter_IN2" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19SRVNFVF9ET01BSU4=::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "adc_converter_qip" -library "adc_converter_IN2" -name IP_COMPONENT_NAME "YWRjX2NvbnZlcnRlcl9xaXA="
+set_global_assignment -entity "adc_converter_qip" -library "adc_converter_IN2" -name IP_COMPONENT_DISPLAY_NAME "YWRjX2luMl9jaDBfY29udmVydGVy"
+set_global_assignment -entity "adc_converter_qip" -library "adc_converter_IN2" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "adc_converter_qip" -library "adc_converter_IN2" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "adc_converter_qip" -library "adc_converter_IN2" -name IP_COMPONENT_AUTHOR "Z2lvdmFubnk="
+set_global_assignment -entity "adc_converter_qip" -library "adc_converter_IN2" -name IP_COMPONENT_VERSION "MS4w"
+
+set_global_assignment -library "adc_converter_IN2" -name VERILOG_FILE [file join $::quartus(qip_path) "adc_converter_IN2.v"]
+set_global_assignment -library "adc_converter_IN2" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/adc_converter_qip.v"]
+set_global_assignment -library "adc_converter_IN2" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/pll10.v"]
+set_global_assignment -library "adc_converter_IN2" -name QIP_FILE [file join $::quartus(qip_path) "submodules/pll10.qip"]
+set_global_assignment -library "adc_converter_IN2" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/anain2_converter.v"]
+set_global_assignment -library "adc_converter_IN2" -name QIP_FILE [file join $::quartus(qip_path) "submodules/anain2_converter.qip"]

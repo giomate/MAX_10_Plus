@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_cpu'
  * SOPC Builder design path: C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/LMX2694/nios_cpu.sopcinfo
  *
- * Generated: Sun Feb 07 13:23:58 CET 2021
+ * Generated: Sun Feb 14 17:56:28 CET 2021
  */
 
 /*
@@ -65,8 +65,12 @@
  *
  */
 
+#define EXCEPTION_STACK_REGION_BASE 0x3fc00
+#define EXCEPTION_STACK_REGION_SPAN 1024
+#define INTERRUPT_STACK_REGION_BASE 0x3f800
+#define INTERRUPT_STACK_REGION_SPAN 1024
 #define ONCHIP_MEMORY2_0_REGION_BASE 0x20020
-#define ONCHIP_MEMORY2_0_REGION_SPAN 131040
+#define ONCHIP_MEMORY2_0_REGION_SPAN 128992
 #define RESET_REGION_BASE 0x20000
 #define RESET_REGION_SPAN 32
 
@@ -97,5 +101,21 @@
  */
 
 #define ALT_LOAD_COPY_RWDATA
+
+
+/*
+ * Use a separate exception stack
+ *
+ */
+
+#define ALT_EXCEPTION_STACK
+
+
+/*
+ * Use a separate interrupt stack
+ *
+ */
+
+#define ALT_INTERRUPT_STACK
 
 #endif /* __LINKER_H_ */

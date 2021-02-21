@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Feb 18 19:59:55 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : ADC_Converter
+Top-level Entity Name : ADC_Converter
+Family : MAX 10
+Total logic elements : 224
+    Total combinational functions : 189
+    Dedicated logic registers : 74
+Total registers : 74
+Total pins : 80
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 2
+UFM blocks : 0
+ADC blocks : 1

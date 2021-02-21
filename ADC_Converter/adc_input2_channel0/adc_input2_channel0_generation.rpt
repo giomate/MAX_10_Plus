@@ -1,0 +1,36 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\ADC_Converter\adc_input2_channel0.qsys --block-symbol-file --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\ADC_Converter\adc_input2_channel0 --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading ADC_Converter/adc_input2_channel0.qsys
+Progress: Reading input file
+Progress: Adding adc_in2_ch0_converter_0 [adc_in2_ch0_converter 1.0]
+Progress: Parameterizing module adc_in2_ch0_converter_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\ADC_Converter\adc_input2_channel0.qsys --synthesis=VERILOG --output-directory=C:\Salukat\Purificador\SoftwareDevelopment\Max_10_NEEK\ADC_Converter\adc_input2_channel0\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading ADC_Converter/adc_input2_channel0.qsys
+Progress: Reading input file
+Progress: Adding adc_in2_ch0_converter_0 [adc_in2_ch0_converter 1.0]
+Progress: Parameterizing module adc_in2_ch0_converter_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: adc_input2_channel0: Generating adc_input2_channel0 "adc_input2_channel0" for QUARTUS_SYNTH
+Info: adc_in2_ch0_converter_0: "adc_input2_channel0" instantiated adc_in2_ch0_converter "adc_in2_ch0_converter_0"
+Info: rst_controller: "adc_input2_channel0" instantiated altera_reset_controller "rst_controller"
+Info: Reusing file C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/ADC_Converter/adc_input2_channel0/synthesis/submodules/altera_reset_controller.v
+Info: Reusing file C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/ADC_Converter/adc_input2_channel0/synthesis/submodules/altera_reset_synchronizer.v
+Info: Reusing file C:/Salukat/Purificador/SoftwareDevelopment/Max_10_NEEK/ADC_Converter/adc_input2_channel0/synthesis/submodules/altera_reset_controller.sdc
+Info: adc_input2_channel0: Done "adc_input2_channel0" with 3 modules, 16 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

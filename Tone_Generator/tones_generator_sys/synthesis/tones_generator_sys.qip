@@ -1,0 +1,37 @@
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_TOOL_VERSION "20.1"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "tones_generator_sys" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../tones_generator_sys.sopcinfo"]
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name SLD_INFO "QSYS_NAME tones_generator_sys HAS_SOPCINFO 1 GENERATION_ID 1613763711"
+set_global_assignment -library "tones_generator_sys" -name MISC_FILE [file join $::quartus(qip_path) "../tones_generator_sys.cmp"]
+set_global_assignment -library "tones_generator_sys" -name SLD_FILE [file join $::quartus(qip_path) "tones_generator_sys.debuginfo"]
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_TARGETED_DEVICE_FAMILY "MAX 10"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_GENERATED_DEVICE_FAMILY "{MAX 10}"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_QSYS_MODE "SYSTEM"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "tones_generator_sys" -name MISC_FILE [file join $::quartus(qip_path) "../../tones_generator_sys.qsys"]
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_NAME "dG9uZXNfZ2VuZXJhdG9yX3N5cw=="
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_DISPLAY_NAME "dG9uZXNfZ2VuZXJhdG9yX3N5cw=="
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYxMzc2MzcxMQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::TUFYIDEw::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBNNTBEQUY0ODRDNkdFUw==::QXV0byBERVZJQ0U="
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_PARAMETER "QVVUT19EQUNfVE9ORVNfR0VORVJBVE9SXzBfQ0xPQ0tfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_PARAMETER "QVVUT19EQUNfVE9ORVNfR0VORVJBVE9SXzBfQ0xPQ0tfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "tones_generator_sys" -library "tones_generator_sys" -name IP_COMPONENT_PARAMETER "QVVUT19EQUNfVE9ORVNfR0VORVJBVE9SXzBfQ0xPQ0tfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "tone_generator_qip" -library "tones_generator_sys" -name IP_COMPONENT_NAME "dG9uZV9nZW5lcmF0b3JfcWlw"
+set_global_assignment -entity "tone_generator_qip" -library "tones_generator_sys" -name IP_COMPONENT_DISPLAY_NAME "ZGFjX3RvbmVzX2dlbmVyYXRvcg=="
+set_global_assignment -entity "tone_generator_qip" -library "tones_generator_sys" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "tone_generator_qip" -library "tones_generator_sys" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "tone_generator_qip" -library "tones_generator_sys" -name IP_COMPONENT_AUTHOR "Z2lvdmFubnk="
+set_global_assignment -entity "tone_generator_qip" -library "tones_generator_sys" -name IP_COMPONENT_VERSION "MS4w"
+
+set_global_assignment -library "tones_generator_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "tones_generator_sys.v"]
+set_global_assignment -library "tones_generator_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/tone_generator_qip.v"]
+set_global_assignment -library "tones_generator_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/Sine_Wave.v"]
+set_global_assignment -library "tones_generator_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/enable_sine_wave.v"]
+set_global_assignment -library "tones_generator_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/raw_sine_wave.v"]
+set_global_assignment -library "tones_generator_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DAC16.v"]

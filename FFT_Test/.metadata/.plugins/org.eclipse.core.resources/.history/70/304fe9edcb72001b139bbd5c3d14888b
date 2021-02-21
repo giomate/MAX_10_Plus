@@ -1,0 +1,32 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Feb 19, 2021
+ *      Author: giova
+ */
+
+#include "main.h"
+
+ FFT_HANDLER  searcher;
+
+int main(){
+
+	uint8_t  max_index;
+	uint16_t dac_value;
+	searcher.Init();
+	while(1){
+		max_index=searcher.Read_Index();
+		if (max_index!=0){
+			printf("max_index %d : \r\n",max_index);
+			usleep(1000);
+		}else{
+			dac_value=searcher.Read_DAC_Value();
+		}
+	}
+	 return 0;
+}
+
+
+
+
+
